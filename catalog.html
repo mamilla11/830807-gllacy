@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Gllacy Shop</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a class="header-logo" href="index.html">
+          <img src="img/logo-shop.png" width="154" height="64" alt="Логотип">
+        </a>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item nav-item-catalog nav-item-selected">
+              <a class="header-nav-link nav-link-catalog" href="#">Каталог</a>
+              <ul class="catalog-list">
+                <li class="catalog-item catalog-item-novelity">
+                  <a class="catalog-link catalog-link-novelity" href="#">Новинки</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link" href="#">Щербеты</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#">О Компании</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-actions">
+          <div class="action-search">
+            <button class="action-btn action-btn-search">Поиск</button>
+            <form>
+              <input class="input-text" type="search" 
+                     name="search" id="search" 
+                     placeholder="Что ищем?">
+            </form>
+          </div>
+          <div class="action-auth">
+            <button class="action-btn action-btn-auth">Вход</button>
+            <form>
+              <input class="input-text" type="email" 
+                     name="login" id="login" 
+                     placeholder="Электронная почта" required>
+              <input class="input-text" type="password" 
+                     name="password" id="password" 
+                     placeholder="Пароль" required>
+              <input class="input-btn" type="submit" 
+                     value="Войти">
+              <div class="auth-help">
+                <a class="auth-help-link" href="#">Забыли пароль?</a>
+                <a class="auth-help-link" href="#">Новая регистрация</a>
+              </div>
+            </form>
+          </div>
+          <div class="action-cart">
+            <button class="action-btn action-btn-cart">Корзина</button>
+            <table>
+              <tr>
+                <td><button>x</button></td>
+                <td><img src="img/ice-cream-1-mini.jpeg" alt="Миниатюра мороженки"></td>
+                <td>Пломбир с апельсиновым джемом</td>
+                <td>1,5 кг х <span>200 руб.</span></td>
+                <td>300 руб.</td>
+              </tr>
+              <tr>
+                <td><button>x</button></td>
+                <td><img src="img/ice-cream-1-mini.jpeg" alt="Миниатюра мороженки"></td>
+                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td>1,5 кг х <span>300 руб.</span></td>
+                <td>450 руб.</td>
+              </tr>
+              <tr>
+                <td colspan="5">Итого: 750 руб.</td>
+              </tr>
+              <tr>
+                <td colspan="5"><a href="#">Оформить заказ</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <p class="header-schedule">
+          С 10 до 20, ежедневно <b>8 812 450-25-25</b>
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="creamy-products">
+            <div class="breadcrumbs">
+                <a class="breadcrumbs-link breadcrumbs-main-link" href="index.html">Главная</a>
+                <a class="breadcrumbs-link breadcrumbs-catalog-link" href="#">Каталог</a>
+                <a class="breadcrumbs-link breadcrumbs-current">Сливочное</a>
+            </div>
+            <h1>Сливочное мороженое</h1>
+            <form class="filter">
+              <label>Сортировка:
+                <select class="sort-by" id="sort-by">
+                  <option selected>по популярности</option>
+                  <option>сначала недорогие</option>
+                  <option>сначала дорогие</option>
+                  <option>по жирности</option>
+                </select>
+              </label>
+              <p>Цена: 100 руб. - 500 руб.
+                <input type="range" min="100" max="500">
+              </p>
+              <p>Жирность: 
+                <label for="fatless">0%</label>
+                <input type="radio" id="fatless" name="fat" value="0%">
+                <label for="small">до 10</label>
+                <input type="radio" id="small" name="fat" value="до 10%" checked>
+                <label for="medium">до 30%</label>
+                <input type="radio" id="medium" name="fat" value="до 30%">
+                <label for="large">выше 30</label>
+                <input type="radio" id="large" name="fat" value="выше 30%">
+              </p> 
+              <p>Наполнители:
+                <label for="chocolate">шоколадные</label>
+                <input type="checkbox" id="chocolate" name="chocolate" checked>
+                <label for="sugar">сахарные присыпки</label>
+                <input type="checkbox" id="sugar" name="sugar" checked>
+                <label for="fruits">фрукты</label>
+                <input type="checkbox" id="fruits" name="fruits">
+                <label for="syrup">сиропы</label>
+                <input type="checkbox" id="syrup" name="syrup">
+                <label for="gam">джемы</label>
+                <input type="checkbox" id="gam" name="gam">
+              </p>
+              <input type="submit" value="Применить">
+            </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <nav class="footer-nav">
+          <ul class="footer-nav-socials-list">
+            <li class="footer-nav-socials-item">
+              <a class="social-btn social-btn-twit" href="#" title="Twitter">Twitter</a>
+            </li>
+            <li class="footer-nav-socials-item">
+              <a class="social-btn social-btn-inst" href="#" title="Instagram">Instagram</a>
+            </li>
+            <li class="footer-nav-socials-item">
+              <a class="social-btn social-btn-fb" href="#" title="Facebook">Facebook</a>
+            </li>
+            <li class="footer-nav-socials-item">
+              <a class="social-btn social-btn-vk" href="#" title="В Контакте">В Контакте</a>
+            </li>
+          </ul>
+          <ul class="footer-nav-info-list">
+            <li class="footer-nav-info-item">
+              <a href="#"><span>С любовью</span>Для поставщиков</a>
+            </li>
+            <li class="footer-nav-info-item">
+              <a href="#">О производстве</a>
+            </li>
+            <li class="footer-nav-info-item">
+              <a href="#">Наши документы</a>
+            </li>
+            <li class="footer-nav-info-item">
+              <a href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-copyright">
+          <a class="footer-logo" href="https://up.htmlacademy.ru/htmlcss/22"> 
+            <img src="img/logo-htmlacademy-small.png" width="108" height="39" alt="Логотип HtmlAcademy">
+          </a>
+          <p>Сделано в <a href="https://up.htmlacademy.ru/htmlcss/22">Html Academy</a> &copy; 2017</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
