@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Gllacy Shop</title>
+    <title>Gllacy Catalog</title>
   </head>
   <body>
     <header>
@@ -97,53 +97,163 @@
         </p>
       </div>
     </header>
-    <main>
-      <div class="container">
-        <section class="creamy-products">
-            <div class="breadcrumbs">
-                <a class="breadcrumbs-link breadcrumbs-main-link" href="index.html">Главная</a>
-                <a class="breadcrumbs-link breadcrumbs-catalog-link" href="#">Каталог</a>
-                <a class="breadcrumbs-link breadcrumbs-current">Сливочное</a>
-            </div>
-            <h1>Сливочное мороженое</h1>
-            <form class="filter">
-              <label>Сортировка:
-                <select class="sort-by" id="sort-by">
-                  <option selected>по популярности</option>
-                  <option>сначала недорогие</option>
-                  <option>сначала дорогие</option>
-                  <option>по жирности</option>
-                </select>
-              </label>
-              <p>Цена: 100 руб. - 500 руб.
-                <input type="range" min="100" max="500">
-              </p>
-              <p>Жирность: 
-                <label for="fatless">0%</label>
-                <input type="radio" id="fatless" name="fat" value="0%">
-                <label for="small">до 10</label>
-                <input type="radio" id="small" name="fat" value="до 10%" checked>
-                <label for="medium">до 30%</label>
-                <input type="radio" id="medium" name="fat" value="до 30%">
-                <label for="large">выше 30</label>
-                <input type="radio" id="large" name="fat" value="выше 30%">
-              </p> 
-              <p>Наполнители:
-                <label for="chocolate">шоколадные</label>
-                <input type="checkbox" id="chocolate" name="chocolate" checked>
-                <label for="sugar">сахарные присыпки</label>
-                <input type="checkbox" id="sugar" name="sugar" checked>
-                <label for="fruits">фрукты</label>
-                <input type="checkbox" id="fruits" name="fruits">
-                <label for="syrup">сиропы</label>
-                <input type="checkbox" id="syrup" name="syrup">
-                <label for="gam">джемы</label>
-                <input type="checkbox" id="gam" name="gam">
-              </p>
-              <input type="submit" value="Применить">
-            </form>
-        </section>
-      </div>
+    <main class="catalog container">
+      <header class="catalog__header">
+        <nav class="crumbs">
+          <ul class="crumbs__list">
+            <li class="crumbs__item">
+              <a class="crumbs__link" href="index.html">Главная</a>
+            </li>
+            <li class="crumbs__item">
+              <a class="crumbs__link" href="#">Каталог</a>
+            </li>
+            <li class="crumbs__item">
+              <a class="crumbs__link crumbs__link--current">Сливочное</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="catalog__title">Сливочное мороженое</h1>
+      </header>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр</h2>
+        <form class="filter__form">
+          <fieldset class="filter__group">
+            <legend class="filter__title">Сортировка:</legend>
+            <select class="filter__sort">
+                <option selected>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Цена:</legend>
+            <label class="filter__price">100 руб. - 500 руб.
+              <input type="range" min="100" max="500" step="50">
+            </label>
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Жирность:</legend>
+            <label class="filter__fatness">
+              <input type="radio" name="fat" value="0%">
+              <span>0%</span>
+            </label>
+            <label class="filter__fatness">
+              <input type="radio" name="fat" value="&lt;10%" checked>
+              <span>до 10%</span>
+            </label>
+            <label class="filter__fatness">
+              <input type="radio" name="fat" value="&lt;30%">
+              <span>до 30%</span>
+            </label>
+            <label class="filter__fatness">
+              <input type="radio" name="fat" value="&gt;30%">
+              <span>выше 30%</span>
+            </label>
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Наполнители:</legend>
+            <label class="filter__topping">
+              <input type="checkbox" id="chocolate" name="chocolate" checked>
+              <span>шоколадные</span>
+            </label>
+            <label class="filter__topping">
+              <input type="checkbox" id="sugar" name="sugar" checked>
+              <span>сахарные присыпки</span>
+            </label>
+            <label class="filter__topping">
+              <input type="checkbox" id="fruits" name="fruits">
+              <span>фрукты</span>
+            </label>
+            <label class="filter__topping">
+              <input type="checkbox" id="syrup" name="syrup">
+              <span>сиропы</span>
+            </label>
+            <label class="filter__topping">
+              <input type="checkbox" id="gam" name="gam">
+              <span>джемы</span>
+            </label>
+          </fieldset>
+          <input class="filter__apply" type="submit" value="Применить">
+        </form>
+    </section>
+    <section class="assortment">
+      <h2 class="visually-hidden">Ассортимент</h2>
+      <ul class="assortment__list">
+        <li class="assortment__item">
+          <img src="img/prodult-1.jpg" width="267" height="267" alt="Мороженое">
+          <p>310 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-2.jpg" width="267" height="267" alt="Мороженое">
+          <p>380 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-3.jpg" width="267" height="267" alt="Мороженое">
+          <p>355 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-4.jpg" width="267" height="267" alt="Мороженое">
+          <p>415 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-5.jpg" width="267" height="267" alt="Мороженое">
+          <p>325 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочное с брусничным джемом</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-6.jpg" width="267" height="267" alt="Мороженое">
+          <p>410 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-7.jpg" width="267" height="267" alt="Мороженое">
+          <p>375 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-8.jpg" width="267" height="267" alt="Мороженое">
+          <p>320 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-9.jpg" width="267" height="267" alt="Мороженое">
+          <p>440 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-10.jpg" width="267" height="267" alt="Мороженое">
+          <p>435 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочное с ментоловым сиропом</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-11.jpg" width="267" height="267" alt="Мороженое">
+          <p>355 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+        <li class="assortment__item">
+          <img src="img/prodult-12.jpg" width="267" height="267" alt="Мороженое">
+          <p>420 &#x20bd;<span>/кг</span></p>
+          <h3><a href="#">Сливочное с мятным сиропом</a></h3>
+          <button class="preview-btn">Быстрый просмотр</button>
+        </li>
+      </ul>
+    </section>
     </main>
     <footer>
       <div class="container">
