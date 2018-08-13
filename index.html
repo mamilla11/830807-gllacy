@@ -12,7 +12,7 @@
     <input class="slider-switcher" type="radio" name="switch" value="3">
     <header class="main-header container">
       <a class="main-header__logo">
-        <img src="img/logo-shop.png" width="154" height="64" alt="Логотип">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип">
       </a>
       <nav class="main-header__nav">
         <ul class="menu__list">
@@ -45,7 +45,7 @@
         </ul>
         <ul class="action__list">
           <li class="action__item action__item--search">
-            <a class="action__link" href="#">Поиск</a>
+            <a class="action__link action__link--search" href="#">Поиск</a>
             <div class="popup">
               <form class="popup__form popup__form--search">
                 <input class="popup__input popup__input--text"
@@ -64,15 +64,17 @@
                 <input class="popup__input popup__input--text"
                        type="password" id="password" name="password"
                        placeholder="Пароль" required>
-                <input class="popup__input popup__input--btn"
-                       type="submit" value="Войти">
-                <div class="popup__aside">
-                  <a class="popup__aside popup__aside--help-link" href="#">
-                    Забыли пароль?
-                  </a>
-                  <a class="popup__aside popup__aside--help-link" href="#">
-                    Новая регистрация
-                  </a>
+                <div class="flex-container">
+                  <input class="popup__input popup__input--btn"
+                         type="submit" value="Войти">
+                  <div class="popup__aside">
+                    <a class="popup__aside popup__aside--help-link" href="#">
+                      Забыли пароль?
+                    </a>
+                    <a class="popup__aside popup__aside--help-link" href="#">
+                      Новая регистрация
+                    </a>
+                  </div>
                 </div>
               </form>
             </div>
@@ -116,19 +118,19 @@
         <h2 class="visually-hidden">Специальные предложения</h2>
         <ul class="slider__list">
           <li class="slider__item">
-            <img src="img/slide-1.png" alt="Слайд 1">
-            <p>Крем-брюле и пломбир с малиновым джемом</p>
-            <a href="#">Давайте оба!</a>
+            <img class="slider__image" src="img/slide_1.png" width="1045" height="881" alt="Слайд 1">
+            <p class="slider__lead">Крем-брюле и пломбир с малиновым джемом</p>
+            <a class="button slider__link" href="#">Давайте оба!</a>
           </li>
           <li class="slider__item">
-            <img src="img/slide-2.png" alt="Слайд 2">
-            <p>Шоколадный пломбир и лимонный сорбет</p>
-            <a href="#">Давайте оба!</a>
+            <img class="slider__image" src="img/slide_2.png" alt="Слайд 2">
+            <p class="slider__lead">Шоколадный пломбир и лимонный сорбет</p>
+            <a class="button slider__link" href="#">Давайте оба!</a>
           </li>
           <li class="slider__item">
-            <img src="img/slide-3.png" alt="Слайд 3">
-            <p>Пломбир с помадкой и клубничный щербет</p>
-            <a href="#">Давайте оба!</a>
+            <img class="slider__image" src="img/slide_3.png" alt="Слайд 3">
+            <p class="slider__lead">Пломбир с помадкой и клубничный щербет</p>
+            <a class="button slider__link" href="#">Давайте оба!</a>
           </li>
         </ul>
       </section>
@@ -141,7 +143,7 @@
               При покупке 2 кг любого фруктового мороженного,
               добавим в ваш заказ банку малинового варенья бесплатно.
             </p>
-            <a class="promo__link" href="#">Хочу варенье!</a>
+            <a class="button promo__link" href="#">Хочу варенье!</a>
           </li>
           <li class="promo__item promo__item--chocolate">
             <h3 class="promo__title">Шоколадки даром!</h3>
@@ -149,7 +151,7 @@
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку
               вкуснейшей шоколадной присыпки совершенно бесплатно.
             </p>
-            <a class="promo__link" href="#">Хочу шоколадки!</a>
+            <a class="button promo__link" href="#">Хочу шоколадки!</a>
           </li>
         </ul>
       </section>
@@ -160,33 +162,33 @@
             <img class="product__image" src="img/product-1.png" width="267" height="267" alt="Мороженое">
             <p class="product__price">310 &#x20bd;<span>/кг</span></p>
             <h3 class="product__name">
-              <a class="product__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <a class="link-light product__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </h3>
-            <button class="product__btn">Быстрый просмотр</button>
+            <button class="button product__btn">Быстрый просмотр</button>
           </li>
           <li class="product__item product__item--hit">
             <img class="product__image" src="img/product-2.png" width="267" height="267" alt="Мороженое">
             <p class="product__price">380 &#x20bd;<span>/кг</span></p>
             <h3 class="product__name">
-              <a class="product__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+              <a class="link-light product__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
             </h3>
-            <button class="product__btn">Быстрый просмотр</button>
+            <button class="button product__btn">Быстрый просмотр</button>
           </li>
           <li class="product__item product__item--hit">
             <img class="product__image" src="img/product-3.png" width="267" height="267" alt="Мороженое">
             <p class="product__price">355 &#x20bd;<span>/кг</span></p>
             <h3 class="product__name">
-              <a class="product__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <a class="link-light product__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </h3>
-            <button class="product__btn">Быстрый просмотр</button>
+            <button class="button product__btn">Быстрый просмотр</button>
           </li>
           <li class="product__item product__item--hit">
             <img class="product__image" src="img/product-4.png" width="267" height="267" alt="Мороженое">
             <p class="product__price">415 &#x20bd;<span>/кг</span></p>
             <h3 class="product__name">
-              <a class="product__link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+              <a class="link-light product__link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </h3>
-            <button class="product__btn">Быстрый просмотр</button>
+            <button class="button product__btn">Быстрый просмотр</button>
           </li>
         </ul>
       </section>
@@ -219,7 +221,7 @@
         <section class="news">
           <h2 class="visually-hidden">Новости</h2>
           <h3 class="new__subtitle">Новое в нашем блоге</h3>
-          <a class="new__link" href="#">10 способов сервировки фрукторых щербетов к столу</a>
+          <a class="link-dark new__link" href="#">10 способов сервировки фрукторых щербетов к столу</a>
         </section>
         <section class="subscribe">
           <h2 class="visually-hidden">Оформление подписки</h2>
@@ -247,7 +249,7 @@
           <p class="contacts__phone">
             Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)
           </p>
-          <button class="feedback__btn">Форма обратной связи</button>
+          <button class="button feedback__btn">Форма обратной связи</button>
           <form class="feedback__modal">
             <b class="feedback__lead">Мы обязательно вам ответим!</b>
             <button class="input-btn-cancel">x</button>
@@ -283,26 +285,26 @@
         </ul>
         <ul class="info__list">
           <li class="info__item">
-            <a class="info__link" href="#"><span>С любовью</span>Для поставщиков</a>
+            <a class="link-light info__link" href="#"><span>С любовью</span>Для поставщиков</a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">О производстве</a>
+            <a class="link-light info__link" href="#">О производстве</a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">Наши документы</a>
+            <a class="link-light info__link" href="#">Наши документы</a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">Экологические стандарты</a>
+            <a class="link-light info__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
       </nav>
       <div class="site__footer--copyright">
         <a class="copyright__linked-logo" href="https://up.htmlacademy.ru/htmlcss/22">
-          <img src="img/logo-htmlacademy-small.png" width="108" height="39" alt="Логотип HtmlAcademy">
+          <img src="img/logo_htmlacademy.svg" width="108" height="39" alt="Логотип HtmlAcademy">
         </a>
         <p class="copyright__text">
           Сделано в
-          <a class="copyright__link" href="https://up.htmlacademy.ru/htmlcss/22">Html Academy</a>
+          <a class="link-light copyright__link" href="https://up.htmlacademy.ru/htmlcss/22">Html Academy</a>
           &copy; 2017
         </p>
       </div>
