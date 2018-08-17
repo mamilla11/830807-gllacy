@@ -20,12 +20,12 @@
       <div class="page-container">
         <header class="page-header">
           <a class="page-header__logo">
-            <img src="img/logo.svg" width="154" height="64" alt="Логотип">
+            <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
           </a>
           <nav class="page-header__nav">
             <ul class="menu__list">
-              <li class="menu__item menu__item--catalog">
-                <a class="menu__link menu__link--catalog" href="#">Каталог</a>
+              <li class="menu__item">
+                <a class="menu__link" href="#"><span>Каталог</span></a>
                 <ul class="submenu__list">
                   <li class="submenu__item submenu__item--novelity">
                     <a class="submenu__link submenu__link--novelity" href="#">Новинки</a>
@@ -45,77 +45,84 @@
                 </ul>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Доставка и оплата</a>
+                <a class="menu__link" href="#"><span>Доставка и оплата</span></a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">О Компании</a>
+                <a class="menu__link" href="#"><span>О Компании</span></a>
               </li>
             </ul>
           </nav>
-          <ul class="action__list">
-            <li class="action__item action__item--search">
-              <a class="action__link action__link--search" href="#">Поиск</a>
-              <div class="popup">
-                <form class="popup__form popup__form--search">
-                  <input class="popup__input popup__input--text"
+
+          <div class="page-header__actions">
+
+            <div class="action action__search">
+              <a class="action__link action__link--text-hidden" href="#" aria-label="Поиск">Поиск</a>
+              <div class="popup popup__search">
+                <form class="form" action="http://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden" for="search">
+                    Введите запрос в поле поиска
+                  </label>
+                  <input class="form__input"
                          type="search" id="search" name="search"
                          placeholder="Что ищем?">
                 </form>
               </div>
-            </li>
-            <li class="action__item action__item--auth">
-              <a class="action__link" href="#">Вход</a>
-              <div class="popup">
-                <form class="popup__form popup__form--auth">
-                  <input class="popup__input popup__input--text"
+            </div>
+
+            <div class="action action__auth">
+              <a class="action__link" href="#" aria-label="Форма авторизации">Вход</a>
+              <div class="popup popup__auth">
+                <form class="form" action="http://echo.htmlacademy.ru" method="post">
+                  <label class="visually-hidden" for="login">Электронная почта</label>
+                  <input class="form__input"
                          type="email" id="login" name="login"
                          placeholder="Электронная почта" required>
-                  <input class="popup__input popup__input--text"
+                  <label class="visually-hidden" for="password">Пароль</label>
+                  <input class="form__input"
                          type="password" id="password" name="password"
                          placeholder="Пароль" required>
                   <div class="flex-container">
-                    <input class="popup__input popup__input--btn"
+                    <input class="button enter-button"
                            type="submit" value="Войти">
                     <div class="popup__aside">
-                      <a class="popup__aside popup__aside--help-link" href="#">
+                      <a class="link-dark popup__aside--help-link" href="#">
                         Забыли пароль?
                       </a>
-                      <a class="popup__aside popup__aside--help-link" href="#">
+                      <a class="link-dark popup__aside--help-link" href="#">
                         Новая регистрация
                       </a>
                     </div>
                   </div>
                 </form>
               </div>
-            </li>
-            <li class="action__item action__item--cart">
-              <a class="action__link" href="#">Корзина</a>
-              <div class="popup">
-                <table class="popup__table popup__table--cart">
-                  <tr>
-                    <td><button>x</button></td>
-                    <td><img src="img/ice-cream-1-mini.jpeg" alt="Миниатюра мороженки"></td>
-                    <td>Пломбир с апельсиновым джемом</td>
+            </div>
+
+            <div class="action action__cart">
+              <a class="action__link" href="#">Пусто</a>
+              <div class="popup popup__cart">
+                <table class="table">
+                  <tr class="cart-item">
+                    <td class="cart-item__close"><img src="img/cross_small.svg" width="11" height="11" alt="Удалить"></td>
+                    <td class="cart-item__image"><img src="img/product-1-mini.png" width="33" height="33" alt="Миниатюра мороженки"></td>
+                    <td class="cart-item__name">Пломбир с апельсиновым джемом</td>
                     <td>1,5 кг х <span>200 руб.</span></td>
                     <td>300 руб.</td>
                   </tr>
-                  <tr>
-                    <td><button>x</button></td>
-                    <td><img src="img/ice-cream-1-mini.jpeg" alt="Миниатюра мороженки"></td>
-                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <tr class="cart-item">
+                    <td class="cart-item__close"><img src="img/cross_small.svg" width="11" height="11" alt="Удалить"></td>
+                    <td class="cart-item__image"><img src="img/product-2-mini.png" width="33" height="33" alt="Миниатюра мороженки"></td>
+                    <td class="cart-item__name">Клубничный пломбир с присыпкой из белого шоколада</td>
                     <td>1,5 кг х <span>300 руб.</span></td>
                     <td>450 руб.</td>
                   </tr>
-                  <tr>
-                    <td colspan="5">Итого: 750 руб.</td>
-                  </tr>
-                  <tr>
-                    <td colspan="5"><a href="#">Оформить заказ</a></td>
+                  <tr class="cart-item">
+                    <td class="total" colspan="5">Итого: 750 руб.</td>
                   </tr>
                 </table>
+                <input class="button" type="submit" value="Оформить заказ">
               </div>
             </li>
-          </ul>
+          </div>
           <div class="page-header__extra">
             <p class="open-hours">С 10 до 20, ежедневно</p>
             <p class="phone">8 812 450-25-25</p>
@@ -240,11 +247,11 @@
                   Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
                   что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)
                 </p>
-                <form class="subscribe__form">
+                <form class="form" action="http://echo.htmlacademy.ru" method="post">
                   <input class="popup__input popup__input--text" type="email"
                          name="subscribe-email" id="subscribe-email"
                          placeholder="Электронная почта" required>
-                  <input class="popup__input popup__input--btn" type="submit" value="Отправить">
+                  <input class="button" type="submit" value="Отправить">
                 </form>
               </div>
             </section>
@@ -261,8 +268,8 @@
               <p class="contacts__phone">
                 Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)
               </p>
-              <button class="button feedback__btn">Форма обратной связи</button>
-              <form class="feedback__modal">
+              <button class="button">Форма обратной связи</button>
+              <form class="form" action="http://echo.htmlacademy.ru" method="post">
                 <b class="feedback__lead">Мы обязательно вам ответим!</b>
                 <button class="input-btn-cancel">x</button>
                 <input class="input-text" type="text"
@@ -274,7 +281,7 @@
                 <textarea class="input-text-multi" cols="10"
                           placeholder="Напишите что-нибудь...">
                 </textarea>
-                <input class="input-btn" type="submit" value="Отправить">
+                <input class="button" type="submit" value="Отправить">
               </form>
             </section>
           </section>
