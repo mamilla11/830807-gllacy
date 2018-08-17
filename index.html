@@ -304,9 +304,9 @@
                 Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)
               </p>
               <button class="button">Форма обратной связи</button>
-              <form class="form" action="http://echo.htmlacademy.ru" method="post">
+              <form class="form visually-hidden" action="http://echo.htmlacademy.ru" method="post">
                 <b class="feedback__lead">Мы обязательно вам ответим!</b>
-                <button class="input-btn-cancel">
+                <button class="input-btn-cancel" type="button">
                   <img src="img/cross_big.svg" width="18" height="17"
                        alt="Закрыть форму обратной связи">
                   <span class="visually-hidden">Закрыть форму обратной связи</span>
@@ -316,14 +316,14 @@
                 </label>
                 <input class="form__input" type="text"
                        id="feedback-name" name="feedback-name"
-                       placeholder="Как вас зовут?">
+                       placeholder="Как вас зовут?" required>
                 <label class="visually-hidden" for="feedback-email">
                   Введите адрес своей электронной почты,
                   чтобы мы могли связаться с вами
                 </label>
                 <input class="form__input" type="email"
                        id="feedback-email" name="feedback-email"
-                       placeholder="Ваша почта для ответа?">
+                       placeholder="Ваша почта для ответа?" required>
                 <label class="visually-hidden" for="feedback-text">
                   Напишите нам что-нибудь...
                 </label>
@@ -368,10 +368,10 @@
                 <a class="link-light info__link" href="#">Для поставщиков</a>
               </li>
               <li class="info__item">
-                <a class="link-light info__link" href="#">О производстве</a>
-              </li>
+                  <a class="link-light info__link" href="#">Наши документы</a>
+                </li>
               <li class="info__item">
-                <a class="link-light info__link" href="#">Наши документы</a>
+                <a class="link-light info__link" href="#">О производстве</a>
               </li>
               <li class="info__item">
                 <a class="link-light info__link" href="#">Экологические стандарты</a>
