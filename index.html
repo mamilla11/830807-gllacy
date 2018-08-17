@@ -20,7 +20,7 @@
       <div class="page-container">
         <header class="page-header">
           <a class="page-header__logo">
-            <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
+            <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
           </a>
           <nav class="page-header__nav">
             <ul class="menu__list">
@@ -81,15 +81,15 @@
                   <input class="form__input"
                          type="password" id="password" name="password"
                          placeholder="Пароль" required>
-                  <div class="flex-container">
+                  <div class="submit">
                     <input class="button enter-button"
                            type="submit" value="Войти">
                     <div class="popup__aside">
-                      <a class="link-dark popup__aside--help-link" href="#">
-                        Забыли пароль?
+                      <a class="popup__aside--help-link" href="#">
+                        <span class="link-dark">Забыли пароль?</span>
                       </a>
-                      <a class="link-dark popup__aside--help-link" href="#">
-                        Новая регистрация
+                      <a class="popup__aside--help-link" href="#">
+                        <span class="link-dark">Новая регистрация</span>
                       </a>
                     </div>
                   </div>
@@ -100,28 +100,57 @@
             <div class="action action__cart">
               <a class="action__link" href="#">Пусто</a>
               <div class="popup popup__cart">
-                <table class="table">
-                  <tr class="cart-item">
-                    <td class="cart-item__close"><img src="img/cross_small.svg" width="11" height="11" alt="Удалить"></td>
-                    <td class="cart-item__image"><img src="img/product-1-mini.png" width="33" height="33" alt="Миниатюра мороженки"></td>
-                    <td class="cart-item__name">Пломбир с апельсиновым джемом</td>
-                    <td>1,5 кг х <span>200 руб.</span></td>
-                    <td>300 руб.</td>
-                  </tr>
-                  <tr class="cart-item">
-                    <td class="cart-item__close"><img src="img/cross_small.svg" width="11" height="11" alt="Удалить"></td>
-                    <td class="cart-item__image"><img src="img/product-2-mini.png" width="33" height="33" alt="Миниатюра мороженки"></td>
-                    <td class="cart-item__name">Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td>1,5 кг х <span>300 руб.</span></td>
-                    <td>450 руб.</td>
-                  </tr>
-                  <tr class="cart-item">
-                    <td class="total" colspan="5">Итого: 750 руб.</td>
-                  </tr>
+                <table class="order">
+                    <tr class="visually-hidden">
+                      <th>Удалить</th>
+                      <th>Миниатюра мороженого</th>
+                      <th>Название мороженого</th>
+                      <th>Вес</th>
+                      <th>Стоимость</th>
+                    </tr>
+                    <tr class="order__row">
+                      <td class="order__delete">
+                        <button type="button">
+                          <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
+                          <span class="visually-hidden">Удалить</span>
+                        </button>
+                      </td>
+                      <td class="order__image">
+                        <img src="img/product-1-mini.png"
+                             width="33" height="33"
+                             alt="Миниатюра мороженки">
+                      </td>
+                      <td class="order__name">Пломбир с апельсиновым джемом</td>
+                      <td class="order__weight">1,5 кг х <span>200 руб.</span></td>
+                      <td class="order__price">300 руб.</td>
+                    </tr>
+
+                    <tr class="order__row">
+                      <td class="order_col">
+                        <button type="button">
+                          <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
+                          <span class="visually-hidden">Удалить</span>
+                        </button>
+                      </td>
+                      <td class="order__image">
+                        <img src="img/product-2-mini.png"
+                             width="33" height="33"
+                             alt="Миниатюра мороженки">
+                      </td>
+                      <td class="order__name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="order__weight">1,5 кг х <span>300 руб.</span></td>
+                      <td class="order__price">450 руб.</td>
+                    </tr>
+                    <tr class="foot_row">
+                      <td class="total" colspan="5">Итого: 750 руб.</td>
+                    </tr>
+                    <tr class="foot_row">
+                      <td class="order__submit" colspan="5"><input class="button" type="submit" value="Оформить заказ"></td>
+                    </tr>
+
                 </table>
-                <input class="button" type="submit" value="Оформить заказ">
               </div>
-            </li>
+            </div>
           </div>
           <div class="page-header__extra">
             <p class="open-hours">С 10 до 20, ежедневно</p>
@@ -138,12 +167,12 @@
                 <a class="button slider__link" href="#">Давайте оба!</a>
               </li>
               <li class="slider__item">
-                <img class="slider__image" src="img/slide_2.png" alt="Слайд 2">
+                <img class="slider__image" src="img/slide_2.png" width="1045" height="881" alt="Слайд 2">
                 <p class="slider__lead">Шоколадный пломбир и лимонный сорбет</p>
                 <a class="button slider__link" href="#">Давайте оба!</a>
               </li>
               <li class="slider__item">
-                <img class="slider__image" src="img/slide_3.png" alt="Слайд 3">
+                <img class="slider__image" src="img/slide_3.png" width="1045" height="881" alt="Слайд 3">
                 <p class="slider__lead">Пломбир с помадкой и клубничный щербет</p>
                 <a class="button slider__link" href="#">Давайте оба!</a>
               </li>
@@ -179,7 +208,7 @@
                 <h3 class="product__name">
                   <a class="link-light product__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                 </h3>
-                <button class="button product__btn">Быстрый просмотр</button>
+                <button class="button button-hidden">Быстрый просмотр</button>
               </li>
               <li class="product__item product__item--hit">
                 <img class="product__image" src="img/product-2.png" width="267" height="267" alt="Мороженое">
@@ -187,7 +216,7 @@
                 <h3 class="product__name">
                   <a class="link-light product__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
                 </h3>
-                <button class="button product__btn">Быстрый просмотр</button>
+                <button class="button button-hidden">Быстрый просмотр</button>
               </li>
               <li class="product__item product__item--hit">
                 <img class="product__image" src="img/product-3.png" width="267" height="267" alt="Мороженое">
@@ -195,7 +224,7 @@
                 <h3 class="product__name">
                   <a class="link-light product__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
                 </h3>
-                <button class="button product__btn">Быстрый просмотр</button>
+                <button class="button button-hidden">Быстрый просмотр</button>
               </li>
               <li class="product__item product__item--hit">
                 <img class="product__image" src="img/product-4.png" width="267" height="267" alt="Мороженое">
@@ -203,7 +232,7 @@
                 <h3 class="product__name">
                   <a class="link-light product__link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
                 </h3>
-                <button class="button product__btn">Быстрый просмотр</button>
+                <button class="button button-hidden">Быстрый просмотр</button>
               </li>
             </ul>
           </section>
@@ -232,7 +261,7 @@
               </li>
             </ul>
           </section>
-          <div class="blog container">
+          <div class="blog">
             <section class="news">
               <h2 class="visually-hidden">Новости</h2>
               <div class="new__wrapper">
@@ -245,20 +274,23 @@
               <div class="subscribe__wrapper">
                 <p class="subscribe__info">
                   Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-                  что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)
+                  что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                 </p>
-                <form class="form" action="http://echo.htmlacademy.ru" method="post">
-                  <input class="popup__input popup__input--text" type="email"
+                <form class="subscribe__form" action="http://echo.htmlacademy.ru" method="post">
+                  <label class="visually-hidden" for="subscribe-email">
+                    Для оформления подписки введите, пожалуйста, свою электронную почту
+                  </label>
+                  <input class="form__input" type="email"
                          name="subscribe-email" id="subscribe-email"
                          placeholder="Электронная почта" required>
-                  <input class="button" type="submit" value="Отправить">
+                  <button class="button" type="submit">Отправить</button>
                 </form>
               </div>
             </section>
           </div>
           <section class="map">
             <h2 class="visually-hidden">Карта</h2>
-            <img src="img/map.png" width="1200" height="430" alt="Карта">
+            <img src="img/map.png" width="1200" height="430" alt="Карта: ул. Большая Конюшенная 19/8, Санкт-Петербург">
             <section class="contacts container">
               <h3 class="visually-hidden">Контактный адрес и телефон</h3>
               <p class="contacts__address">
