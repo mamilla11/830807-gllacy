@@ -52,9 +52,7 @@
               </li>
             </ul>
           </nav>
-
           <div class="page-header__actions">
-
             <div class="action action__search">
               <a class="action__link action__link--text-hidden" href="#" aria-label="Поиск">Поиск</a>
               <div class="popup popup__search">
@@ -68,7 +66,6 @@
                 </form>
               </div>
             </div>
-
             <div class="action action__auth">
               <a class="action__link" href="#" aria-label="Форма авторизации">Вход</a>
               <div class="popup popup__auth">
@@ -96,7 +93,6 @@
                 </form>
               </div>
             </div>
-
             <div class="action action__cart">
               <a class="action__link" href="#">Пусто</a>
               <div class="popup popup__cart">
@@ -124,7 +120,6 @@
                       <td class="order__weight">1,5 кг х <span>200 руб.</span></td>
                       <td class="order__price">300 руб.</td>
                     </tr>
-
                     <tr class="order__row">
                       <td class="order_col">
                         <button type="button">
@@ -147,7 +142,6 @@
                     <tr class="foot_row">
                       <td class="order__submit" colspan="5"><input class="button" type="submit" value="Оформить заказ"></td>
                     </tr>
-
                 </table>
               </div>
             </div>
@@ -203,34 +197,42 @@
             <h2 class="visually-hidden">Популярные товары</h2>
             <ul class="popular__list">
               <li class="product__item product__item--hit">
-                <img class="product__image" src="img/product-1.png" width="267" height="267" alt="Мороженое">
+                <img class="product__image" src="img/product-1.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">310 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                  <a class="link-light product__link" href="#">
+                    Сливочное с апельсиновым джемом и цитрусовой стружкой
+                  </a>
                 </h3>
                 <button class="button button-hidden">Быстрый просмотр</button>
               </li>
               <li class="product__item product__item--hit">
-                <img class="product__image" src="img/product-2.png" width="267" height="267" alt="Мороженое">
+                <img class="product__image" src="img/product-2.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">380 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+                  <a class="link-light product__link" href="#">
+                    Сливочно-кофейное с кусочками шоколада
+                  </a>
                 </h3>
                 <button class="button button-hidden">Быстрый просмотр</button>
               </li>
               <li class="product__item product__item--hit">
-                <img class="product__image" src="img/product-3.png" width="267" height="267" alt="Мороженое">
+                <img class="product__image" src="img/product-3.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">355 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                  <a class="link-light product__link" href="#">
+                    Сливочно-клубничное с присыпкой из белого шоколада
+                  </a>
                 </h3>
                 <button class="button button-hidden">Быстрый просмотр</button>
               </li>
               <li class="product__item product__item--hit">
-                <img class="product__image" src="img/product-4.png" width="267" height="267" alt="Мороженое">
+                <img class="product__image" src="img/product-4.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">415 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                  <a class="link-light product__link" href="#">
+                    Сливочное крем-брюле с карамельной подливкой
+                  </a>
                 </h3>
                 <button class="button button-hidden">Быстрый просмотр</button>
               </li>
@@ -290,8 +292,9 @@
           </div>
           <section class="map">
             <h2 class="visually-hidden">Карта</h2>
-            <img src="img/map.png" width="1200" height="430" alt="Карта: ул. Большая Конюшенная 19/8, Санкт-Петербург">
-            <section class="contacts container">
+            <img src="img/map.png" width="1200" height="430"
+                 alt="Карта: ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            <section class="contacts">
               <h3 class="visually-hidden">Контактный адрес и телефон</h3>
               <p class="contacts__address">
                 Адрес главного офиса и офлайн-магазина:
@@ -303,14 +306,28 @@
               <button class="button">Форма обратной связи</button>
               <form class="form" action="http://echo.htmlacademy.ru" method="post">
                 <b class="feedback__lead">Мы обязательно вам ответим!</b>
-                <button class="input-btn-cancel">x</button>
-                <input class="input-text" type="text"
+                <button class="input-btn-cancel">
+                  <img src="img/cross_big.svg" width="18" height="17"
+                       alt="Закрыть форму обратной связи">
+                  <span class="visually-hidden">Закрыть форму обратной связи</span>
+                </button>
+                <label class="visually-hidden" for="feedback-name">
+                  Представьтесь, пожалуйста
+                </label>
+                <input class="form__input" type="text"
                        id="feedback-name" name="feedback-name"
                        placeholder="Как вас зовут?">
-                <input class="input-text" type="email"
+                <label class="visually-hidden" for="feedback-email">
+                  Введите адрес своей электронной почты,
+                  чтобы мы могли связаться с вами
+                </label>
+                <input class="form__input" type="email"
                        id="feedback-email" name="feedback-email"
                        placeholder="Ваша почта для ответа?">
-                <textarea class="input-text-multi" cols="10"
+                <label class="visually-hidden" for="feedback-text">
+                  Напишите нам что-нибудь...
+                </label>
+                <textarea class="form__inputi" id="feedback-text" cols="10"
                           placeholder="Напишите что-нибудь...">
                 </textarea>
                 <input class="button" type="submit" value="Отправить">
@@ -321,16 +338,28 @@
         <footer class="page-footer container">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twit" href="#" title="Twitter">Twitter</a>
+              <a class="social__link social__link--twit" href="#"
+                 aria-label="Подписывайтесь на нас в Твиттере!">
+                Twitter
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--inst" href="#" title="Instagram">Instagram</a>
+              <a class="social__link social__link--inst" href="#"
+                 aria-label="Подписывайтесь на нас в Инстаграмме!">
+                Instagram
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--fb" href="#" title="Facebook">Facebook</a>
+              <a class="social__link social__link--fb" href="#"
+                 aria-label="Подписывайтесь на нас в Фейсбуке!">
+                Facebook
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--vk" href="#" title="В Контакте">В Контакте</a>
+              <a class="social__link social__link--vk" href="#"
+                 aria-label="Подписывайтесь на нас в В Контакте">
+                 В Контакте
+              </a>
             </li>
           </ul>
           <nav class="page-footer__nav"></nav>
