@@ -175,7 +175,7 @@ body {
   border-bottom: none;
 }
 
-.navigation__item:hover {
+.navigation__item:not(.navigation__item--current):hover {
   background-color: #f7f6f3;
 }
 
@@ -183,12 +183,12 @@ body {
   visibility: visible;
 }
 
-.navigation__item:hover .navigation__link {
+.navigation__item:not(.navigation__item--current):hover .navigation__link {
   color: #333333;
   border-bottom: none;
 }
 
-.navigation__item:active {
+.navigation__item:not(.navigation__item--current):active {
   background-color: #ededed;
   box-shadow: inset 0 2px 1px 0 #696969;
 }
@@ -227,7 +227,7 @@ body {
   color: #ffffff;
 }
 
-.submenu__item:hover {
+.submenu__item:not(.submenu__item--current):hover {
   background-color: #fbded8;
 }
 
@@ -239,7 +239,7 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
-.submenu__item:active {
+.submenu__item:not(.submenu__item--current):active {
   background-color: #f6b5a5;
 }
 
@@ -270,32 +270,53 @@ body {
 }
 
 .auth__link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 7px 19px 7px 14px;
   border-radius: 20px;
 }
 
 .order__link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 7px 19px 7px 14px;
   border-radius: 20px;
 }
 
-.search__link:hover .search__icon,
-.auth__link:hover .auth__icon,
-.order__link:hover .order__icon {
-  fill: #000000;
+.auth__link::after {
+  content: "Вход";
+  padding-left: 10px;
 }
 
+.order__link--empty::after {
+  content: "Пусто";
+  padding-left: 10px;
+}
 
-.action:hover {
+.order__link--full::after {
+  content: "2 товара";
+  padding-left: 10px;
+}
+
+.user-action__item:hover .link,
+.user-action__item .order__link--full
+ {
   color: #323232;
-
   background-color: #f8f7f4;
 }
 
-.action:hover .popup {
+.user-action__item:hover .popup {
   visibility: visible;
+}
+
+.user-action__item:hover .search__icon,
+.user-action__item:hover .auth__icon,
+.user-action__item:hover .order__icon {
+  fill: #000000;
+}
+
+.order__link--full .order__icon {
+  fill: #343434;
 }
 
 .menu__extra {
@@ -324,6 +345,10 @@ body {
   font-size: 22px;
   line-height: 24px;
   text-align: right;
+}
+
+.slider-switcher {
+  display: none;
 }
 
 .slider {
@@ -394,9 +419,7 @@ body {
 
 
 
-.slider-switcher {
-  display: none;
-}
+
 
 
 .form /*,

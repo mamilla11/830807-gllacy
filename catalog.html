@@ -18,7 +18,7 @@
             <section class="navigation">
               <h2 class="visually-hidden">Навигация по сайту</h2>
               <ul class="navigation__list">
-                <li class="navigation__item">
+                <li class="navigation__item navigation__item--current">
                   <a class="link navigation__link navigation__link--current" href="#">Каталог</a>
                   <div class="popup popup--left-aligned">
                     <ul class="submenu">
@@ -85,7 +85,7 @@
                             d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,
                             1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/>
                     </svg>
-                    Вход
+                    <span class="visually-hidden">Вход</span>
                   </a>
                   <div class="popup popup--right-aligned">
                     <form class="form auth__form" action="http://echo.htmlacademy.ru" method="post">
@@ -113,7 +113,7 @@
                   </div>
                 </li>
                 <li class="user-action__item order">
-                  <a class="link order__link" href="#" aria-label="Корзина">
+                  <a class="link order__link order__link--full" href="#" aria-label="Корзина">
                     <svg width="21" height="20">
                       <title>Корзина</title>
                       <path class="order__icon" fill="#ffffff"
@@ -123,7 +123,6 @@
                       <circle class="order__icon" fill="#ffffff" cx="15.984" cy="18" r="2"/>
                     </svg>
                     <span class="visually-hidden">Корзина</span>
-                    Пусто
                   </a>
                   <div class="popup popup--right-aligned">
                     <table class="order__list">
@@ -195,7 +194,30 @@
             </div>
           </nav>
         </header>
-        <main class="content-container">
+        <main class="catalog content-container">
+          <header class="catalog__header">
+            <nav class="crumbs">
+              <ul class="crumbs__list">
+                <li class="crumbs__item">
+                  <a class="crumbs__link" href="index.html"
+                     aria-label="Вернуться на главную страницу">
+                    Главная
+                  </a>
+                </li>
+                <li class="crumbs__item">
+                  <a class="crumbs__link" href="#"
+                     aria-label="Перейти на главную страницу каталога">
+                     Каталог
+                  </a>
+                </li>
+                <li class="crumbs__item crumbs__item--current"
+                    aria-label="Текущая страница каталога">
+                  Сливочное
+                </li>
+              </ul>
+            </nav>
+            <h1 class="catalog__title">Сливочное мороженое</h1>
+          </header>
           <section class="filter">
             <h2 class="visually-hidden">Фильтр</h2>
             <form class="filter__form">
@@ -276,7 +298,7 @@
               <input class="filter__apply" type="submit" value="Применить">
             </form>
           </section>
-          <section class="product container">
+          <section class="product">
             <h2 class="visually-hidden">Ассортимент</h2>
             <ul class="product__list">
               <li class="product__item">
