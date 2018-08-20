@@ -298,25 +298,50 @@ body {
   padding-left: 10px;
 }
 
-.user-action__item:hover .link,
-.user-action__item .order__link--full
+.search:hover,
+.auth:hover,
+.order--full {
+  background-color: #ffffff;
+}
+
+.search:hover .search__link,
+.auth:hover .auth__link,
+.order__link--full
  {
   color: #323232;
   background-color: #f8f7f4;
 }
 
-.user-action__item:hover .popup {
+.search:hover .popup,
+.auth:hover .popup,
+.order--full:hover .popup {
   visibility: visible;
 }
 
-.user-action__item:hover .search__icon,
-.user-action__item:hover .auth__icon,
-.user-action__item:hover .order__icon {
-  fill: #000000;
+.search .search__icon,
+.auth .auth__icon {
+  fill: #ffffff;
 }
 
-.order__link--full .order__icon {
+.user-action__item:hover .search__icon,
+.user-action__item:hover .auth__icon {
   fill: #343434;
+}
+
+.order__link--full .order__icon--stroke {
+  fill: #343434;
+}
+
+.order__link--full .order__icon--fill {
+  fill: #e84d37;
+}
+
+.order__link--empty .order__icon--stroke {
+  fill: #ffffff;
+}
+
+.order__link--empty .order__icon--fill {
+  fill: transparent;
 }
 
 .menu__extra {
