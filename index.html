@@ -7,14 +7,14 @@
     <title>Gllacy Shop</title>
   </head>
   <body>
-    <input class="slider-switcher slider-switcher__1"
-           id="slider-switch-1" type="radio"
+    <input class="slider-switcher"
+           id="slider-radio-1" type="radio"
            name="slider-switch" value="1" checked>
-    <input class="slider-switcher slider-switcher__2"
-           id="slider-switch-2" type="radio"
+    <input class="slider-switcher"
+           id="slider-radio-2" type="radio"
            name="slider-switch" value="2">
-    <input class="slider-switcher slider-switcher__3"
-           id="slider-switch-3" type="radio"
+    <input class="slider-switcher"
+           id="slider-radio-3" type="radio"
            name="slider-switch" value="3">
     <div class="page">
       <div class="page-container">
@@ -28,7 +28,9 @@
               <h2 class="visually-hidden">Навигация по сайту</h2>
               <ul class="navigation__list">
                 <li class="navigation__item">
-                  <a class="link navigation__link" href="#">Каталог</a>
+                  <a class="link navigation__link" href="#">
+                    <span class="navigation__label">Каталог</span>
+                  </a>
                   <div class="popup popup--left-aligned">
                     <ul class="submenu">
                       <li class="submenu__item">
@@ -50,10 +52,14 @@
                   </div>
                 </li>
                 <li class="navigation__item">
-                  <a class="link navigation__link" href="#"><span>Доставка и оплата</span></a>
+                  <a class="link navigation__link" href="#">
+                    <span class="navigation__label">Доставка и оплата</span>
+                  </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="link navigation__link" href="#"><span>О Компании</span></a>
+                  <a class="link navigation__link" href="#">
+                    <span class="navigation__label">О Компании</span>
+                  </a>
                 </li>
                   </ul>
             </section>
@@ -74,11 +80,11 @@
                   </a>
                   <div class="popup popup--right-aligned">
                     <form class="form search__form" action="http://echo.htmlacademy.ru" method="get">
-                      <label class="visually-hidden" for="search">
+                      <label class="visually-hidden" for="search-input">
                         Введите запрос в поле поиска
                       </label>
-                      <input class="form__input search__input"
-                             type="search" id="search" name="search"
+                      <input class="form__input form__input--search"
+                             type="search" id="search-input" name="search"
                              placeholder="Что ищем?">
                     </form>
                   </div>
@@ -93,7 +99,7 @@
                       <path class="auth__icon"
                             d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,
                             1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/>
-                            
+
                     </svg>
                     <span class="visually-hidden">Вход</span>
                   </a>
@@ -111,11 +117,11 @@
                         <input class="button auth__submit-button"
                                type="submit" value="Войти">
                         <div class="auth__help-wrapper">
-                          <a class="auth__help-link" href="#">
-                            <span class="link-text--dark">Забыли пароль?</span>
+                          <a class="link--dark auth__help-link" href="#">
+                            <span>Забыли пароль?</span>
                           </a>
-                          <a class="auth__help-link" href="#">
-                            <span class="link-text--dark">Новая регистрация</span>
+                          <a class="link--dark auth__help-link" href="#">
+                            <span>Новая регистрация</span>
                           </a>
                         </div>
                       </div>
@@ -136,64 +142,75 @@
                     <span class="visually-hidden">Корзина</span>
                   </a>
                   <div class="popup popup--right-aligned">
-                    <table class="order__list">
-                      <tr class="visually-hidden">
-                        <th>Удалить</th>
-                        <th>Миниатюра мороженого</th>
-                        <th>Название мороженого</th>
-                        <th>Вес</th>
-                        <th>Стоимость</th>
-                      </tr>
-                      <tr class="order__item">
-                        <td class="order__cancel">
-                          <button class="button-cancel" type="button">
-                            <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
-                            <span class="visually-hidden">Удалить</span>
-                          </button>
-                        </td>
-                        <td class="order__image">
-                          <img src="img/product-1-mini.png"
-                               width="33" height="33"
-                               alt="Миниатюра мороженки">
-                        </td>
-                        <td class="order__name">
-                          Пломбир с апельсиновым джемом
-                        </td>
-                        <td class="order__weight">
-                          1,5 кг х
-                          <span class="order__extra">200 руб.</span>
-                        </td>
-                        <td class="order__price">300 руб.</td>
-                      </tr>
-                      <tr class="order__item">
-                        <td class="order__cancel">
-                          <button class="button-cancel" type="button">
-                            <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
-                            <span class="visually-hidden">Удалить</span>
-                          </button>
-                        </td>
-                        <td class="order__image">
-                          <img src="img/product-2-mini.png"
-                               width="33" height="33"
-                               alt="Миниатюра мороженки">
-                        </td>
-                        <td class="order__name">
-                          Клубничный пломбир с присыпкой из белого шоколада
-                        </td>
-                        <td class="order__weight">
-                          1,5 кг х
-                          <span class="order__extra">300 руб.</span>
-                        </td>
-                        <td class="order__price">450 руб.</td>
-                      </tr>
-                      <tr class="order__item">
-                        <td class="order__total" colspan="5">Итого: 750 руб.</td>
-                      </tr>
-                      <tr class="order__item">
-                        <td class="order__submit" colspan="5">
-                          <input class="button" type="submit" value="Оформить заказ">
-                        </td>
-                      </tr>
+                    <table class="order__table">
+                      <thead class="visually-hidden">
+                        <tr>
+                          <th>Удалить</th>
+                          <th>Миниатюра мороженого</th>
+                          <th>Название мороженого</th>
+                          <th>Вес</th>
+                          <th>Стоимость</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="order__item">
+                          <td class="order__cancel">
+                            <button class="button-cancel" type="button">
+                              <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
+                              <span class="visually-hidden">Удалить</span>
+                            </button>
+                          </td>
+                          <td class="order__image">
+                            <img src="img/product-1-mini.png"
+                                 width="33" height="33"
+                                 alt="Миниатюра мороженки">
+                          </td>
+                          <td class="order__name">
+                            Пломбир с апельсиновым джемом
+                          </td>
+                          <td class="order__weight">
+                            1,5 кг х
+                            <span class="order__extra">200 руб.</span>
+                          </td>
+                          <td class="order__price">300 руб.</td>
+                        </tr>
+                        <tr class="order__item">
+                          <td class="order__cancel">
+                            <button class="button-cancel" type="button">
+                              <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
+                              <span class="visually-hidden">Удалить</span>
+                            </button>
+                          </td>
+                          <td class="order__image">
+                            <img src="img/product-2-mini.png"
+                                 width="33" height="33"
+                                 alt="Миниатюра мороженки">
+                          </td>
+                          <td class="order__name">
+                            Клубничный пломбир с присыпкой из белого шоколада
+                          </td>
+                          <td class="order__weight">
+                            1,5 кг х
+                            <span class="order__extra">300 руб.</span>
+                          </td>
+                          <td class="order__price">450 руб.</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr >
+                          <td colspan="5"><hr></td>
+                        </tr>
+                        <tr class="order__item order__item--foot">
+                          <td class="order__total" colspan="5">Итого: 750 руб.</td>
+                        </tr>
+                        <tr class="order__item order__item--foot">
+                          <td class="order__submit" colspan="5">
+                            <a class="button" href="#" aria-lable="Оформить заказ">
+                              Оформить заказ
+                            </a>
+                          </td>
+                        </tr>
+                      </tfoot>
                     </table>
                   </div>
                 </li>
@@ -225,6 +242,11 @@
                 <a class="button slider__link" href="#">Давайте оба!</a>
               </li>
             </ul>
+            <div class="slider__controls">
+              <label class="slider__control" for="slider-radio-1" tabindex="0"></label>
+              <label class="slider__control" for="slider-radio-2" tabindex="0"></label>
+              <label class="slider__control" for="slider-radio-3" tabindex="0"></label>
+            </div>
           </section>
 
           <section class="promo content-container">
