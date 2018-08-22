@@ -278,7 +278,7 @@
                 <img class="product__image" src="img/product-1.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">310 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">
+                  <a class="link link--light product__link" href="#">
                     Сливочное с апельсиновым джемом и цитрусовой стружкой
                   </a>
                 </h3>
@@ -288,7 +288,7 @@
                 <img class="product__image" src="img/product-2.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">380 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">
+                  <a class="link link--light  product__link" href="#">
                     Сливочно-кофейное с кусочками шоколада
                   </a>
                 </h3>
@@ -298,7 +298,7 @@
                 <img class="product__image" src="img/product-3.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">355 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">
+                  <a class="link link--light  product__link" href="#">
                     Сливочно-клубничное с присыпкой из белого шоколада
                   </a>
                 </h3>
@@ -308,7 +308,7 @@
                 <img class="product__image" src="img/product-4.png" width="267" height="267" alt="Фотография мороженого">
                 <p class="product__price">415 &#x20bd;<span>/кг</span></p>
                 <h3 class="product__name">
-                  <a class="link-light product__link" href="#">
+                  <a class="link link--light  product__link" href="#">
                     Сливочное крем-брюле с карамельной подливкой
                   </a>
                 </h3>
@@ -415,58 +415,67 @@
           </section>
         </main>
         <footer class="page-footer content-container">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--twit" href="#"
-                 aria-label="Подписывайтесь на нас в Твиттере!">
-                Twitter
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--inst" href="#"
-                 aria-label="Подписывайтесь на нас в Инстаграмме!">
-                Instagram
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--fb" href="#"
-                 aria-label="Подписывайтесь на нас в Фейсбуке!">
-                Facebook
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--vk" href="#"
-                 aria-label="Подписывайтесь на нас в В Контакте">
-                 В Контакте
-              </a>
-            </li>
-          </ul>
-          <nav class="page-footer__nav"></nav>
-            <ul class="info__list">
-              <li class="info__item">
-                <a class="link-light info__link" href="#">Для поставщиков</a>
-              </li>
-              <li class="info__item">
-                  <a class="link-light info__link" href="#">Наши документы</a>
+          <nav class="page-footer__nav">
+            <section class="social">
+              <h2 class="visually-hidden">Мы в социальных сетях</h2>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="link social__link social__link--twit" href="#"
+                     aria-label="Подписывайтесь на нас в Твиттере!">
+                    Twitter
+                  </a>
                 </li>
-              <li class="info__item">
-                <a class="link-light info__link" href="#">О производстве</a>
-              </li>
-              <li class="info__item">
-                <a class="link-light info__link" href="#">Экологические стандарты</a>
-              </li>
-            </ul>
+                <li class="social__item">
+                  <a class="link social__link social__link--inst" href="#"
+                     aria-label="Подписывайтесь на нас в Инстаграмме!">
+                    Instagram
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="link social__link social__link--fb" href="#"
+                     aria-label="Подписывайтесь на нас в Фейсбуке!">
+                    Facebook
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="link social__link social__link--vk" href="#"
+                     aria-label="Подписывайтесь на нас в В Контакте">
+                    В Контакте
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section class="info">
+              <h2 class="visually-hidden">Дополнительная информация</h2>
+              <ul class="info__list">
+                <li class="info__item">
+                  <a class="link link--light info__link info__link--important" href="#">Для поставщиков</a>
+                </li>
+                <li class="info__item">
+                    <a class="link link--light info__link" href="#">Наши документы</a>
+                  </li>
+                <li class="info__item">
+                  <a class="link link--light info__link" href="#">О производстве</a>
+                </li>
+                <li class="info__item">
+                  <a class="link link--light info__link" href="#">Экологические стандарты</a>
+                </li>
+              </ul>
+            </section>
+
+            <div class="copyright">
+              <a class="copyright__linked-logo" href="https://up.htmlacademy.ru/htmlcss/22">
+                <img src="img/logo_htmlacademy.svg" width="108" height="39" alt="Логотип HtmlAcademy">
+              </a>
+              <p class="copyright__text">
+                Сделано в
+                <a class="link link--light copyright__link" href="https://up.htmlacademy.ru/htmlcss/22">
+                  Html Academy
+                </a>
+                &copy; 2017
+              </p>
+            </div>
           </nav>
-          <div class="page-footer__copyright">
-            <a class="copyright__linked-logo" href="https://up.htmlacademy.ru/htmlcss/22">
-              <img src="img/logo_htmlacademy.svg" width="108" height="39" alt="Логотип HtmlAcademy">
-            </a>
-            <p class="copyright__text">
-              Сделано в
-              <a class="link-light copyright__link" href="https://up.htmlacademy.ru/htmlcss/22">Html Academy</a>
-              &copy; 2017
-            </p>
-          </div>
         </footer>
       </div>
     </div>
