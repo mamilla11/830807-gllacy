@@ -217,13 +217,13 @@
             <nav class="crumbs">
               <ul class="crumbs__list">
                 <li class="crumbs__item">
-                  <a class="crumbs__link" href="index.html"
+                  <a class="link link--light crumbs__link" href="index.html"
                      aria-label="Вернуться на главную страницу">
                     Главная
                   </a>
                 </li>
                 <li class="crumbs__item">
-                  <a class="crumbs__link" href="#"
+                  <a class="link link--light crumbs__link" href="#"
                      aria-label="Перейти на главную страницу каталога">
                      Каталог
                   </a>
@@ -250,68 +250,51 @@
               </fieldset>
               <fieldset class="filter__group">
                 <legend class="filter__title">Цена:</legend>
-                <div class="filter__option">
-                  <label class="filter__price" for="price-range">100 руб. - 500 руб.</label>
-                  <input class="filter__input filter__input--range"
-                         type="range" id="price-range"
-                         min="100" max="500" step="50">
-                </div>
+                <label class="filter__price" for="price-range">100 руб. - 500 руб.</label>
+                <input class="filter__input filter__input--range"
+                        type="range" id="price-range"
+                        min="100" max="500" step="50">
               </fieldset>
               <fieldset class="filter__group">
                 <legend class="filter__title">Жирность:</legend>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-1" name="fatness"
-                          value="0%">
-                  <label class="filter__fatness" for="fatness-radio-1">0%</label>
-                </div>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-2" name="fatness"
-                          value="&lt;10%" checked>
-                  <label class="filter__fatness" for="fatness-radio-2">до 10%</label>
-                </div>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-3" name="fatness"
-                          value="&lt;30%">
-                  <label class="filter__fatness" for="fatness-radio-3">до 30%</label>
-                </div>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-4" name="fatness"
-                          value="&gt;30%">
-                  <label class="filter__fatness" for="fatness-radio-4">выше 30%</label>
-                 </div>
+                <input class="filter__input filter__input--radio"
+                        type="radio" id="fatness-radio-1" name="fatness"
+                        value="0%">
+                <label class="filter__fatness" for="fatness-radio-1">0%</label>
+
+                <input class="filter__input filter__input--radio"
+                        type="radio" id="fatness-radio-2" name="fatness"
+                        value="&lt;10%" checked>
+                <label class="filter__fatness" for="fatness-radio-2">до 10%</label>
+
+                <input class="filter__input filter__input--radio"
+                        type="radio" id="fatness-radio-3" name="fatness"
+                        value="&lt;30%">
+                <label class="filter__fatness" for="fatness-radio-3">до 30%</label>
+
+                <input class="filter__input filter__input--radio"
+                        type="radio" id="fatness-radio-4" name="fatness"
+                        value="&gt;30%">
+                <label class="filter__fatness" for="fatness-radio-4">выше 30%</label>
               </fieldset>
               <fieldset class="filter__group">
                 <legend class="filter__title">Наполнители:</legend>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox" id="topping-opt-1" name="chocolate"
-                          checked>
-                  <label class="filter__topping" for="topping-opt-1">шоколадные</label>
-                </div>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--checkbox"
-                        type="checkbox" id="topping-opt-2" name="sugar" checked>
-                  <label class="filter__topping" for="topping-opt-2">сахарные присыпки</label>
-                </div>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox" id="topping-opt-3" name="fruits">
-                  <label class="filter__topping" for="topping-opt-3">фрукты</label>
-                </div>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox" id="topping-opt-4" name="syrup">
-                  <label class="filter__topping" for="topping-opt-4">сиропы</label>
-                </div>
-                <div class="filter__option">
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox"  id="topping-opt-5" name="gam">
-                  <label class="filter__topping" for="topping-opt-5">джемы</label>
-                </div>
+                <input class="filter__input filter__input--checkbox"
+                        type="checkbox" id="topping-opt-1" name="chocolate"
+                        checked>
+                <label class="filter__topping" for="topping-opt-1">шоколадные</label>
+                <input class="filter__input filter__input--checkbox"
+                      type="checkbox" id="topping-opt-2" name="sugar" checked>
+                <label class="filter__topping" for="topping-opt-2">сахарные присыпки</label>
+                <input class="filter__input filter__input--checkbox"
+                        type="checkbox" id="topping-opt-3" name="fruits">
+                <label class="filter__topping" for="topping-opt-3">фрукты</label>
+                <input class="filter__input filter__input--checkbox"
+                        type="checkbox" id="topping-opt-4" name="syrup">
+                <label class="filter__topping" for="topping-opt-4">сиропы</label>
+                <input class="filter__input filter__input--checkbox"
+                        type="checkbox"  id="topping-opt-5" name="gam">
+                <label class="filter__topping" for="topping-opt-5">джемы</label>
               </fieldset>
               <input class="filter__apply" type="submit" value="Применить">
             </form>
@@ -421,22 +404,22 @@
             <nav class="pagination">
               <ul class="pagination__list">
                 <li class="pagination__item pagination__item--current">
-                  <a class="pagination__link" aria-label="Страница 1">1</a>
+                  <a class="link pagination__link" aria-label="Страница 1">1</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#" aria-label="Страница 2">2</a>
+                  <a class="link pagination__link" href="#" aria-label="Страница 2">2</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#" aria-label="Страница 3">3</a>
+                  <a class="link pagination__link" href="#" aria-label="Страница 3">3</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#" aria-label="Страница 4">4</a>
+                  <a class="link pagination__link" href="#" aria-label="Страница 4">4</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#" aria-label="Страница 5">5</a>
+                  <a class="link pagination__link" href="#" aria-label="Страница 5">5</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#" aria-label="Следующая страница">&gt;</a>
+                  <a class="link pagination__link" href="#" aria-label="Следующая страница">&gt;</a>
                 </li>
               </ul>
             </nav>
