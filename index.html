@@ -68,7 +68,7 @@
               <h2 class="visually-hidden">Пользовательские действия</h2>
               <ul class="user-action__list">
                 <li class="user-action__item search">
-                  <a class="link search__link" href="#" aria-label="Поиск">
+                  <a class="link user-action__link search__link" href="#" aria-label="Поиск">
                     <svg width="17" height="17">
                       <title>Поиск</title>
                       <path class="search__icon"
@@ -91,7 +91,7 @@
                   </div>
                 </li>
                 <li class="user-action__item auth">
-                  <a class="link auth__link" href="#" aria-label="Форма авторизации">
+                  <a class="link user-action__link auth__link" href="#" aria-label="Форма авторизации">
                     <svg width="21" height="19">
                       <title>Вход</title>
                       <polygon class="auth__icon"
@@ -130,7 +130,7 @@
                   </div>
                 </li>
                 <li class="user-action__item order order--empty">
-                  <a class="link order__link order__link--empty" href="#" aria-label="Корзина">
+                  <a class="link user-action__link order__link order__link--empty" href="#" aria-label="Корзина">
                     <svg width="21" height="20">
                       <title>Корзина</title>
                       <path class="order__icon--fill" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/>
@@ -142,78 +142,6 @@
                     </svg>
                     <span class="visually-hidden">Корзина</span>
                   </a>
-                  <div class="popup popup--right-aligned">
-                    <table class="order__table">
-                      <thead class="visually-hidden">
-                        <tr>
-                          <th>Удалить</th>
-                          <th>Миниатюра мороженого</th>
-                          <th>Название мороженого</th>
-                          <th>Вес</th>
-                          <th>Стоимость</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="order__item">
-                          <td class="order__cancel">
-                            <button class="button-cancel" type="button">
-                              <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
-                              <span class="visually-hidden">Удалить</span>
-                            </button>
-                          </td>
-                          <td class="order__image">
-                            <img src="img/product-1-mini.png"
-                                 width="33" height="33"
-                                 alt="Миниатюра мороженки">
-                          </td>
-                          <td class="order__name">
-                            Пломбир с апельсиновым джемом
-                          </td>
-                          <td class="order__weight">
-                            1,5 кг х
-                            <span class="order__extra">200 руб.</span>
-                          </td>
-                          <td class="order__price">300 руб.</td>
-                        </tr>
-                        <tr class="order__item">
-                          <td class="order__cancel">
-                            <button class="button-cancel" type="button">
-                              <img src="img/cross_small.svg" width="11" height="11" alt="Удалить">
-                              <span class="visually-hidden">Удалить</span>
-                            </button>
-                          </td>
-                          <td class="order__image">
-                            <img src="img/product-2-mini.png"
-                                 width="33" height="33"
-                                 alt="Миниатюра мороженки">
-                          </td>
-                          <td class="order__name">
-                            Клубничный пломбир с присыпкой из белого шоколада
-                          </td>
-                          <td class="order__weight">
-                            1,5 кг х
-                            <span class="order__extra">300 руб.</span>
-                          </td>
-                          <td class="order__price">450 руб.</td>
-                        </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr >
-                          <td colspan="5"><hr></td>
-                        </tr>
-                        <tr class="order__item order__item--foot">
-                          <td class="order__total" colspan="5">Итого: 750 руб.</td>
-                        </tr>
-                        <tr class="order__item order__item--foot">
-                          <td class="order__submit" colspan="5">
-                            <a class="button" href="#" aria-lable="Оформить заказ">
-                              Оформить заказ
-                            </a>
-                          </td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
                 </li>
               </ul>
             </section>
@@ -228,18 +156,15 @@
             <section class="slider">
               <h2 class="visually-hidden">Специальные предложения</h2>
               <ul class="slider__list">
-                <li class="slider__item">
-                  <img class="slider__image" src="img/slide_1.png" width="1045" height="881" alt="Слайд 1">
+                <li class="slider__item" id="slide-1">
                   <p class="slider__lead">Крем-брюле и пломбир с малиновым джемом</p>
                   <a class="button slider__link" href="#">Давайте оба!</a>
                 </li>
-                <li class="slider__item">
-                  <img class="slider__image" src="img/slide_2.png" width="1045" height="881" alt="Слайд 2">
+                <li class="slider__item" id="slide-2">
                   <p class="slider__lead">Шоколадный пломбир и лимонный сорбет</p>
                   <a class="button slider__link" href="#">Давайте оба!</a>
                 </li>
-                <li class="slider__item">
-                  <img class="slider__image" src="img/slide_3.png" width="1045" height="881" alt="Слайд 3">
+                <li class="slider__item" id="slide-3">
                   <p class="slider__lead">Пломбир с помадкой и клубничный щербет</p>
                   <a class="button slider__link" href="#">Давайте оба!</a>
                 </li>
@@ -258,7 +183,7 @@
                 <li class="promo__item promo__item--raspberry">
                   <h3 class="promo__title">Малинка даром!</h3>
                   <p class="promo__text">
-                    При покупке 2 кг любого фруктового мороженного,
+                    При покупке 2 кг любого фруктового мороженого,
                     добавим в ваш заказ банку малинового варенья бесплатно.
                   </p>
                   <a class="button promo__link" href="#">Хочу варенье!</a>
@@ -279,8 +204,8 @@
               <h2 class="visually-hidden">Популярные товары</h2>
               <ul class="popular__list">
                 <li class="product__item product__item--hit">
-                  <img class="product__image" src="img/product-1.png" width="267" height="267" alt="Фотография мороженого">
-                  <p class="product__price">310 &#x20bd;<span>/кг</span></p>
+                  <img class="product__image" src="img/product-1.png" width="100%" alt="Фотография мороженого">
+                  <p class="product__price">310&#x20bd;<span>/кг</span></p>
                   <h3 class="product__name">
                     <a class="link link--light product__link" href="#">
                       Сливочное с апельсиновым джемом и цитрусовой стружкой
@@ -289,8 +214,8 @@
                   <button class="button product__button">Быстрый просмотр</button>
                 </li>
                 <li class="product__item product__item--hit">
-                  <img class="product__image" src="img/product-2.png" width="267" height="267" alt="Фотография мороженого">
-                  <p class="product__price">380 &#x20bd;<span>/кг</span></p>
+                  <img class="product__image" src="img/product-2.png" width="100%" alt="Фотография мороженого">
+                  <p class="product__price">380&#x20bd;<span>/кг</span></p>
                   <h3 class="product__name">
                     <a class="link link--light product__link" href="#">
                       Сливочно-кофейное с кусочками шоколада
@@ -299,8 +224,8 @@
                   <button class="button product__button">Быстрый просмотр</button>
                 </li>
                 <li class="product__item product__item--hit">
-                  <img class="product__image" src="img/product-3.png" width="267" height="267" alt="Фотография мороженого">
-                  <p class="product__price">355 &#x20bd;<span>/кг</span></p>
+                  <img class="product__image" src="img/product-3.png" width="100%" alt="Фотография мороженого">
+                  <p class="product__price">355&#x20bd;<span>/кг</span></p>
                   <h3 class="product__name">
                     <a class="link link--light product__link" href="#">
                       Сливочно-клубничное с присыпкой из белого шоколада
@@ -309,8 +234,8 @@
                   <button class="button product__button">Быстрый просмотр</button>
                 </li>
                 <li class="product__item product__item--hit">
-                  <img class="product__image" src="img/product-4.png" width="267" height="267" alt="Фотография мороженого">
-                  <p class="product__price">415 &#x20bd;<span>/кг</span></p>
+                  <img class="product__image" src="img/product-4.png" width="100%" alt="Фотография мороженого">
+                  <p class="product__price">415&#x20bd;<span>/кг</span></p>
                   <h3 class="product__name">
                     <a class="link link--light product__link" href="#">
                       Сливочное крем-брюле с карамельной подливкой
