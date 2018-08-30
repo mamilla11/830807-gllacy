@@ -1,44 +1,13 @@
+/*********************************************************************
+GENERAL
+**********************************************************************/
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
-}
-
-#slider-radio-1:checked ~ .page {
-  background-color: #849d8f;
-}
-
-#slider-radio-1:checked ~ .page .page-container {
-  background-image: url("../img/slide_1.png");
-}
-
-#slider-radio-2:checked ~ .page {
-  background-color: #8996a6;
-}
-
-#slider-radio-2:checked ~ .page .page-container {
-  background-image: url("../img/slide_2.png");
-}
-
-#slider-radio-3:checked ~ .page {
-  background-color: #9d8b84;
-}
-
-#slider-radio-3:checked ~ .page .page-container {
-  background-image: url("../img/slide_3.png");
-}
-
-#slider-radio-1:checked ~  .page .slider #slide-1,
-#slider-radio-2:checked ~  .page .slider #slide-2,
-#slider-radio-3:checked ~  .page .slider #slide-3 {
-  display: block;
-}
-
-#slider-radio-1:checked ~ .page .slider .slider__control[for="slider-radio-1"],
-#slider-radio-2:checked ~ .page .slider .slider__control[for="slider-radio-2"],
-#slider-radio-3:checked ~ .page .slider .slider__control[for="slider-radio-3"] {
-  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .page {
@@ -54,6 +23,22 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 3px;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.page-container::before,
+.page-container::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.page-container::before {
+  background-image: url("../img/slide_2.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/slide_3.png");
 }
 
 .page-container--simple {
@@ -393,6 +378,11 @@ body {
   padding-left: 6px;
 }
 
+.order__link--full  {
+  color: #323232;
+  background-color: #ffffff;
+}
+
 .order__link--empty::after {
   content: "Пусто";
 
@@ -405,21 +395,18 @@ body {
   padding-left: 10px;
 }
 
-.user-action__link:hover,
-.order__link--full {
-  color: #323232;
-  background-color: #ffffff;
-}
-
-.search:hover .popup,
-.auth:hover .popup,
-.order--full:hover .popup {
-  visibility: visible;
-}
-
 .search__icon,
 .auth__icon {
   fill: #ffffff;
+}
+
+.user-action__item:not(.order__link--empty):hover .popup {
+  visibility: visible;
+}
+
+.user-action__item:not(.order__link--empty):hover .user-action__link {
+  color: #323232;
+  background-color: #ffffff;
 }
 
 .user-action__item:hover .search__icon,
@@ -556,6 +543,9 @@ body {
   text-align: right;
 }
 
+/*********************************************************************
+SLIDER
+**********************************************************************/
 .slider {
   position: relative;
   z-index: 1;
@@ -594,10 +584,6 @@ body {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.slider-switcher {
-  display: none;
-}
-
 .slider__controls {
   position: absolute;
   bottom: 18px;
@@ -623,6 +609,46 @@ body {
 }
 
 .slider__control:active {
+  background-color: #ffffff;
+}
+
+.slider-switcher {
+  display: none;
+}
+
+#slider-radio-1:checked ~ .page {
+  background-color: #849d8f;
+}
+
+#slider-radio-1:checked ~ .page .page-container {
+  background-image: url("../img/slide_1.png");
+}
+
+#slider-radio-2:checked ~ .page {
+  background-color: #8996a6;
+}
+
+#slider-radio-2:checked ~ .page .page-container {
+  background-image: url("../img/slide_2.png");
+}
+
+#slider-radio-3:checked ~ .page {
+  background-color: #9d8b84;
+}
+
+#slider-radio-3:checked ~ .page .page-container {
+  background-image: url("../img/slide_3.png");
+}
+
+#slider-radio-1:checked ~  .page .slider #slide-1,
+#slider-radio-2:checked ~  .page .slider #slide-2,
+#slider-radio-3:checked ~  .page .slider #slide-3 {
+  display: block;
+}
+
+#slider-radio-1:checked ~ .page .slider .slider__control[for="slider-radio-1"],
+#slider-radio-2:checked ~ .page .slider .slider__control[for="slider-radio-2"],
+#slider-radio-3:checked ~ .page .slider .slider__control[for="slider-radio-3"] {
   background-color: #ffffff;
 }
 
