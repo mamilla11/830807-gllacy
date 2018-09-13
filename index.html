@@ -328,49 +328,30 @@
             </section>
           </div>
           <section class="map">
-            <!-- <h2 class="visually-hidden">Наш адрес на карте</h2> -->
-            <div class="content-container">
-              <section class="contacts">
-                <h3 class="visually-hidden">Контактный адрес и телефон</h3>
-                <div class="contacts__address">
-                  <p class="contacts__desc">Адрес главного офиса</br> и офлайн-магазина:</p>
-                  <p class="contacts__data">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-                </div>
-                <div class="contacts__phone">
-                  <p class="contacts__phone-desc">Для заказов по телефону:</p>
-                  <p class="contacts__phone-data">8 812 450-25-25</p>
-                  <p class="contacts__phone-extra">(с 10 до 20 ежедневно)</p>
-                </div>
-                <div class="feedback">
-                  <button class="button feedback__button--open">Форма обратной связи</button>
-                  <div class="overlay"></div>
-                  <form class="modal feedback__modal" action="http://echo.htmlacademy.ru" method="post">
-                    <b class="feedback__lead">Мы обязательно вам ответим!</b>
-                    <button class="feedback__button--close" type="button">Закрыть</button>
-                    <label class="visually-hidden" for="feedback-name">
-                      Представьтесь, пожалуйста
-                    </label>
-                    <input class="form__input feedback__input" type="text"
-                          id="feedback-name" name="feedback-name"
-                          placeholder="Как вас зовут?" required>
-                    <label class="visually-hidden" for="feedback-email">
-                      Введите адрес своей электронной почты,
-                      чтобы мы могли связаться с вами
-                    </label>
-                    <input class="form__input feedback__input" type="email"
-                          id="feedback-email" name="feedback-email"
-                          placeholder="Ваша почта для ответа?" required>
-                    <label class="visually-hidden" for="feedback-text">
-                      Напишите нам что-нибудь...
-                    </label>
-                    <textarea class="form__input feedback__textarea" id="feedback-text"
-                              placeholder="Напишите что-нибудь...">
-                    </textarea>
-                    <input class="button feedback__button--submit" type="submit" value="Отправить">
-                  </form>
-                </div>
-              </section>
-            </div>
+            <h2 class="visually-hidden">Наш адрес на карте</h2>
+            <!-- <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!
+                                             2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768
+                                             !4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRi
+                                             NCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_Qtd
+                                             GC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1536857734322"
+                    width="100%" height="430" frameborder="0" style="border:0" allowfullscreen>
+            </iframe> -->
+
+            <section class="contacts">
+              <h3 class="visually-hidden">Контактный адрес и телефон</h3>
+              <div class="contacts__address">
+                <p class="contacts__desc">Адрес главного офиса</br> и офлайн-магазина:</p>
+                <p class="contacts__data">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+              </div>
+              <div class="contacts__phone">
+                <p class="contacts__phone-desc">Для заказов по телефону:</p>
+                <p class="contacts__phone-data">8 812 450-25-25</p>
+                <p class="contacts__phone-extra">(с 10 до 20 ежедневно)</p>
+              </div>
+              <div class="feedback">
+                <button class="button feedback__button--open">Форма обратной связи</button>
+              </div>
+            </section>
           </section>
         </main>
         <footer class="page-footer content-container">
@@ -411,10 +392,10 @@
                   <a class="link link--light info__link info__link--important" href="#">Для поставщиков</a>
                 </li>
                 <li class="info__item">
-                    <a class="link link--light info__link" href="#">Наши документы</a>
-                  </li>
-                <li class="info__item">
                   <a class="link link--light info__link" href="#">О производстве</a>
+                </li>
+                <li class="info__item">
+                  <a class="link link--light info__link" href="#">Наши документы</a>
                 </li>
                 <li class="info__item">
                   <a class="link link--light info__link" href="#">Экологические стандарты</a>
@@ -423,19 +404,43 @@
             </section>
 
             <div class="copyright">
-              <a class="copyright__linked-logo" href="https://up.htmlacademy.ru/htmlcss/22">
-                <img src="img/logo_htmlacademy.svg" width="108" height="39" alt="Логотип HtmlAcademy">
+              <a class="copyright__link" href="https://up.htmlacademy.ru/htmlcss/22">
+                <img class="copyright__logo" src="img/logo_htmlacademy.svg" width="108" height="39" alt="Логотип HtmlAcademy">
               </a>
               <p class="copyright__text">
                 Сделано в
-                <a class="link link--light copyright__link" href="https://up.htmlacademy.ru/htmlcss/22">
-                  Html Academy
+                <a class="link link--light" href="https://up.htmlacademy.ru/htmlcss/22">
+                  HTML Academy
                 </a>
                 &copy; 2017
               </p>
             </div>
           </nav>
         </footer>
+        <div class="overlay"></div>
+          <form class="modal feedback__modal" action="http://echo.htmlacademy.ru" method="post">
+            <b class="feedback__lead">Мы обязательно вам ответим!</b>
+            <button class="feedback__button--close" type="button">Закрыть</button>
+            <label class="visually-hidden" for="feedback-name">
+              Представьтесь, пожалуйста
+            </label>
+            <input class="form__input feedback__input" type="text"
+                  id="feedback-name" name="feedback-name"
+                  placeholder="Как вас зовут?" required>
+            <label class="visually-hidden" for="feedback-email">
+              Введите адрес своей электронной почты,
+              чтобы мы могли связаться с вами
+            </label>
+            <input class="form__input feedback__input" type="email"
+                  id="feedback-email" name="feedback-email"
+                  placeholder="Ваша почта для ответа?" required>
+            <label class="visually-hidden" for="feedback-text">
+              Напишите нам что-нибудь...
+            </label>
+            <textarea class="form__input feedback__textarea" id="feedback-text"
+                      placeholder="Напишите что-нибудь..."></textarea>
+            <input class="button feedback__button--submit" type="submit" value="Отправить">
+          </form>
       </div>
     </div>
     <script src="js/script.js"></script>
