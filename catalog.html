@@ -254,46 +254,121 @@
               <fieldset class="filter__group">
                 <legend class="filter__title">Жирность:</legend>
                 <div class="filter__wrapper">
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-1" name="fatness"
-                          value="0%">
-                  <label class="filter__fatness" for="fatness-radio-1">0%</label>
-
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-2" name="fatness"
-                          value="&lt;10%" checked>
-                  <label class="filter__fatness" for="fatness-radio-2">до 10%</label>
-
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-3" name="fatness"
-                          value="&lt;30%">
-                  <label class="filter__fatness" for="fatness-radio-3">до 30%</label>
-
-                  <input class="filter__input filter__input--radio"
-                          type="radio" id="fatness-radio-4" name="fatness"
-                          value="&gt;30%">
-                  <label class="filter__fatness" for="fatness-radio-4">выше 30%</label>
+                  <label class="filter__fatness">
+                    <input class="visually-hidden"
+                           type="radio" id="fatness-radio-1" name="fatness"
+                           value="0%">
+                    <span class="filter__fatness-indicator"></span>
+                    0%
+                  </label>
+                  <label class="filter__fatness">
+                    <input class="visually-hidden"
+                           type="radio" id="fatness-radio-2" name="fatness"
+                           value="&lt;10%" checked>
+                    <span class="filter__fatness-indicator"></span>
+                    до 10%
+                  </label>
+                  <label class="filter__fatness">
+                    <input class="visually-hidden"
+                           type="radio" id="fatness-radio-3" name="fatness"
+                           value="&lt;30%">
+                    <span class="filter__fatness-indicator"></span>
+                    до 30%
+                  </label>
+                  <label class="filter__fatness">
+                    <input class="visually-hidden"
+                           type="radio" id="fatness-radio-4" name="fatness"
+                           value="&gt;30%">
+                    <span class="filter__fatness-indicator"></span>
+                    выше 30%
+                  </label>
                 </div>
               </fieldset>
               <fieldset class="filter__group">
                 <legend class="filter__title">Наполнители:</legend>
                 <div class="filter__wrapper">
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox" id="topping-opt-1" name="chocolate"
-                          checked>
-                  <label class="filter__topping" for="topping-opt-1">шоколадные</label>
-                  <input class="filter__input filter__input--checkbox"
-                        type="checkbox" id="topping-opt-2" name="sugar" checked>
-                  <label class="filter__topping" for="topping-opt-2">сахарные присыпки</label>
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox" id="topping-opt-3" name="fruits">
-                  <label class="filter__topping" for="topping-opt-3">фрукты</label>
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox" id="topping-opt-4" name="syrup">
-                  <label class="filter__topping" for="topping-opt-4">сиропы</label>
-                  <input class="filter__input filter__input--checkbox"
-                          type="checkbox"  id="topping-opt-5" name="gam">
-                  <label class="filter__topping" for="topping-opt-5">джемы</label>
+                  <label class="filter__topping">
+                    <input class="visually-hidden"
+                           type="checkbox" id="topping-opt-1" name="chocolate"
+                           checked>
+                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                      <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
+                                                      0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
+                                                      0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                    </svg>
+                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+                      <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                      <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
+                                                      1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
+                                                      3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                    </svg>
+                    <span class="filter__topping-name">шоколадные</span>
+                  </label>
+                  <label class="filter__topping">
+                    <input class="visually-hidden"
+                           type="checkbox" id="topping-opt-2" name="sugar"
+                           checked>
+                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                      <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
+                                                      0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
+                                                      0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                    </svg>
+                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+                      <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                      <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
+                                                      1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
+                                                      3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                    </svg>
+                    <span class="filter__topping-name">сахарные присыпки</span>
+                  </label>
+                  <label class="filter__topping">
+                    <input class="visually-hidden"
+                           type="checkbox" id="topping-opt-3" name="fruits">
+                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                      <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
+                                                      0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
+                                                      0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                    </svg>
+                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+                      <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                      <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
+                                                      1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
+                                                      3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                    </svg>
+                    <span class="filter__topping-name">фрукты</span>
+                  </label>
+                  <label class="filter__topping">
+                    <input class="visually-hidden"
+                            type="checkbox" id="topping-opt-4" name="syrup">
+                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                      <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
+                                                      0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
+                                                      0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                    </svg>
+                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+                      <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                      <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
+                                                      1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
+                                                      3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                    </svg>
+                    <span class="filter__topping-name">сиропы</span>
+                  </label>
+                  <label class="filter__topping">
+                    <input class="visually-hidden"
+                            type="checkbox" id="topping-opt-5" name="gam">
+                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                      <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
+                                                      0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
+                                                      0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                    </svg>
+                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+                      <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                      <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
+                                                      1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
+                                                      3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                    </svg>
+                    <span class="filter__topping-name">джемы</span>
+                  </label>
                 </div>
               </fieldset>
               <button class="filter__button" type="submit">Применить</button>

@@ -1453,7 +1453,7 @@ SLIDER
   padding: 0;
   margin: 0;
 
-  list-style: none;s
+  list-style: none;
 }
 
 .crumbs__item {
@@ -1476,7 +1476,7 @@ SLIDER
   display: inline-block;
   vertical-align: middle;
   border-style: none;
-  padding: 0px 15px 15px 0;
+  padding: 0px 7px 15px 0;
   margin-top: 2px;
 }
 
@@ -1494,8 +1494,12 @@ SLIDER
 
   color: #ffffff;
 
-  background-color: #a9b9af;
+  background-color: #9db1a5;
   border-radius: 20px;
+}
+
+.filter__sort {
+  width: 193px;
 }
 
 .filter__price {
@@ -1553,6 +1557,89 @@ SLIDER
 .range__toggle--max {
   right: 45px;
 }
+
+.filter__fatness {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 33px;
+  margin-right: 18px;
+
+  cursor: pointer;
+}
+
+.filter__fatness-indicator:hover,
+.filter__fatness-indicator:focus {
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+.filter__fatness-indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+
+  width: 8px;
+  height: 8px;
+  background-color: #9db1a5;
+  border: 4px solid #9db1a5;
+  box-shadow: 0 0 0 3px #eef1ef;
+  border-radius: 50%;
+}
+
+input[name="fatness"]:checked + .filter__fatness-indicator {
+  background-color: #eef1ef;
+}
+
+input[name="fatness"]:checked + .filter__fatness-indicator:hover {
+  background-color: #ffffff;
+}
+
+input[name="fatness"]:checked:disabled + .filter__fatness-indicator {
+  background-color: #b5c4bc;
+}
+
+input[name="fatness"]:disabled + .filter__fatness-indicator {
+  box-shadow: 0 0 0 3px #b5c4bc;
+}
+
+.filter__topping {
+  position: relative;
+  padding-left: 45px;
+}
+
+.checkbox--unchecked,
+.checkbox--checked {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  fill: #eef1ef;
+}
+
+.checkbox--checked {
+  display: none;
+}
+
+.filter__topping:hover .checkbox--unchecked,
+.filter__topping:focus .checkbox--unchecked,
+.filter__topping:hover .checkbox--checked,
+.filter__topping:focus .checkbox--checked {
+  fill: #ffffff;
+}
+
+input[type="checkbox"]:disabled ~ .checkbox--unchecked,
+input[type="checkbox"]:disabled ~ .checkbox--checked {
+  fill: #b5c4bc;
+}
+
+input[type="checkbox"]:checked ~ .checkbox--checked {
+  display: block;
+}
+
+input[type="checkbox"]:checked ~ .checkbox--unchecked {
+  display: none;
+}
+
 
 .filter__button {
   padding: 10px 30px;
