@@ -28,16 +28,17 @@ overlay.addEventListener("click", function(evt) {
   overlay.classList.remove("overlay-show");
 });
 
-search_link.addEventListener("mouseover", function(evt) {
+search_link.addEventListener("mouseover", function() {
   search_input.focus();
 });
 
-login_link.addEventListener("mouseover", function(evt) {
+login_link.addEventListener("mouseover", function() {
   login_input.focus();
 });
 
 window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27) {
+  var escape = 27;
+  if (evt.keyCode === escape) {
     if (feedback_modal.classList.contains("modal-show")) {
       evt.preventDefault();
       feedback_modal.classList.remove("modal-show");
@@ -51,18 +52,18 @@ var myMap;
 ymaps.ready(init);
 
 function init () {
-  myMap = new ymaps.Map('map', {
+  myMap = new ymaps.Map("map", {
     center: [59.93928783923012,30.32921285189815],
     zoom: 16
   }, {
-    searchControlProvider: 'yandex#search'
+    searchControlProvider: "yandex#search"
   }),
 
   myPlacemark = new ymaps.Placemark([59.93866874833191,30.322839923278767], {
-    hintContent: 'ул. Большая Конюшенная 19/8, Санкт-Петербург',
+    hintContent: "ул. Большая Конюшенная 19/8, Санкт-Петербург",
   }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/pin.png',
+      iconLayout: "default#image",
+      iconImageHref: "img/pin.png",
       iconImageSize: [218, 142],
       iconImageOffset: [-37, -133]
   });
