@@ -20,17 +20,14 @@ img {
   height: auto;
 }
 
-.page {
-  min-width: 900px;
-
-  background-color: #849d8f;
-}
-
-.page-container {
+.centerer {
   min-width: 900px;
   max-width: 1200px;
   margin: 0 auto;
+}
 
+.main-page {
+  min-width: 900px;
   background-image: url("../img/slide_1.png");
   background-repeat: no-repeat;
   background-position-x: center;
@@ -39,25 +36,25 @@ img {
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.page-container::before,
-.page-container::after {
+.main-page::before,
+.main-page::after {
   content: "";
 
   visibility: hidden;
 }
 
-.page-container::before {
+.main-page::before {
   background-image: url("../img/slide_2.png");
 }
 
-.site-wrapper::after {
+.main-page::after {
   background-image: url("../img/slide_3.png");
 }
 
-.page-container--simple {
+.catalog-page {
   min-width: 900px;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #849d8f;
+  background-image: linear-gradient(to bottom, #9db1a5 0%, #849d8f 40%);
 }
 
 .content-container {
@@ -220,7 +217,6 @@ PAGE HEADER
   width: 154px;
   height: 64px;
   margin-right: 10px;
-  padding-top: 4px;
   padding-left: 1px;
 }
 
@@ -690,39 +686,30 @@ SLIDER
   display: none;
 }
 
-#slider-radio-1:checked ~ .page {
+#slider-radio-1:checked ~ .main-page {
   background-color: #849d8f;
-}
-
-#slider-radio-1:checked ~ .page .page-container {
   background-image: url("../img/slide_1.png");
 }
 
-#slider-radio-2:checked ~ .page {
+#slider-radio-2:checked ~ .main-page {
   background-color: #8996a6;
-}
-
-#slider-radio-2:checked ~ .page .page-container {
   background-image: url("../img/slide_2.png");
 }
 
-#slider-radio-3:checked ~ .page {
+#slider-radio-3:checked ~ .main-page {
   background-color: #9d8b84;
-}
-
-#slider-radio-3:checked ~ .page .page-container {
   background-image: url("../img/slide_3.png");
 }
 
-#slider-radio-1:checked ~ .page .slider #slide-1,
-#slider-radio-2:checked ~ .page .slider #slide-2,
-#slider-radio-3:checked ~ .page .slider #slide-3 {
+#slider-radio-1:checked ~ .main-page .slider #slide-1,
+#slider-radio-2:checked ~ .main-page .slider #slide-2,
+#slider-radio-3:checked ~ .main-page .slider #slide-3 {
   display: block;
 }
 
-#slider-radio-1:checked ~ .page .slider .slider__control[for="slider-radio-1"],
-#slider-radio-2:checked ~ .page .slider .slider__control[for="slider-radio-2"],
-#slider-radio-3:checked ~ .page .slider .slider__control[for="slider-radio-3"] {
+#slider-radio-1:checked ~ .main-page .slider .slider__control[for="slider-radio-1"],
+#slider-radio-2:checked ~ .main-page .slider .slider__control[for="slider-radio-2"],
+#slider-radio-3:checked ~ .main-page .slider .slider__control[for="slider-radio-3"] {
   background-color: #ffffff;
 }
 
@@ -1502,7 +1489,7 @@ SLIDER
 .filter__wrapper {
   color: #ffffff;
 
-  background-color: #9db1a5;
+  background-color: rgba(255,255,255,0.2);
   border-radius: 20px;
   font-size: 16px;
   line-height: 18px;
@@ -1521,7 +1508,7 @@ SLIDER
   padding: 10px 30px 9px 14px;
   color: #ffffff;
 
-  background-color: #9db1a5;
+  background-color: rgba(255,255,255,0.2);
   border-radius: 20px;
 
   font-size: 16px;
@@ -1726,7 +1713,7 @@ input[type="checkbox"]:checked ~ .checkbox--unchecked {
   color: #ffffff;
   text-decoration: none;
 
-  background-color: #9cb0a4;
+  background-color: rgba(255,255,255,0.2);
   border: none;
   border-radius: 20px;
   box-shadow: inset 0 0 0 2px #fbfcfb;
