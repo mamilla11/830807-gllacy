@@ -803,17 +803,18 @@ SLIDER
 }
 
 .product {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .popular__list,
 .product__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -825,65 +826,51 @@ SLIDER
   justify-content: flex-start;
   align-content: flex-start;
   align-items: center;
-  width: 23.3%;
-  margin-bottom: 38px;
-
+  width: 23.695%;
   text-align: center;
+  padding: 0.5% 0.87% 2.5% 0.87%;
+  margin-top: -0.5%;
+  margin-bottom: -4.4%;
 }
 
-.product__item::before {
-  content: "";
-  position: absolute;
-  top: -2%;
-  left: -5%;
+.product__item:nth-child(4n) {
+  margin-right: -0.87%;
+}
 
-  width: 110%;
-  height: 126%;
+.product__item:nth-child(4n+1) {
+  margin-left: -0.87%;
+}
 
+.product__item:hover {
+  z-index: 1;
   background-color: rgba(255,255,255,0.2);
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-}
-
-.product__item:hover.product__item::before {
-  z-index: 1;
-
-  visibility: visible;
-}
-
-.product__item:hover .product__container {
-  z-index: 1;
 }
 
 .product__item:hover .product__button {
-  z-index: 2;
-
-  display: inline-block;
-
-  vertical-align: middle;
-}
-
-.product__item:hover .product__name {
-  z-index: 2;
-}
-
-.product__button {
-  position: absolute;
-  top: 104%;
-  left: 50%;
-
-  display: none;
-  width: 200px;
-  padding: 10px 10px;
-
-  transform: translateX(-50%);
+  visibility: visible;
 }
 
 .product__container {
   position: relative;
 
   margin-bottom: 7px;
+}
+
+.product__name {
+  margin: 0 0 15px 0;
+  padding: 0;
+  max-width: 257px;
+}
+
+.product__button {
+  display: inline-block;
+  vertical-align: bottom;
+  visibility: hidden;
+  width: 200px;
+  padding: 10px 10px;
+  margin-top: auto;
 }
 
 .product__container--hit::before {
@@ -931,10 +918,7 @@ SLIDER
   font-size: 30px;
 }
 
-.product__name {
-  margin: 0;
-  padding: 0;
-}
+
 
 .product__link {
   font-weight: 500;
@@ -1504,7 +1488,7 @@ SLIDER
 }
 
 .filter {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   font-weight: 500;
   font-size: 16px;
