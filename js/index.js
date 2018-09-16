@@ -28,11 +28,11 @@ overlay.addEventListener("click", function(evt) {
   overlay.classList.remove("overlay-show");
 });
 
-search_link.addEventListener("mouseover", function() {
+search_link.addEventListener("mouseenter", function() {
   search_input.focus();
 });
 
-login_link.addEventListener("mouseover", function() {
+login_link.addEventListener("mouseenter", function() {
   login_input.focus();
 });
 
