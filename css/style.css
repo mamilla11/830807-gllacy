@@ -95,7 +95,7 @@ img {
   height: auto;
 }
 
-.centerer {
+.page-container {
   min-width: 900px;
   max-width: 1200px;
   margin: 0 auto;
@@ -1326,7 +1326,7 @@ SLIDER
   background: url("../img/map.png") no-repeat center;
 }
 
-.contacts-centerer {
+.contacts-container {
   position: relative;
 
   min-height: 430px;
