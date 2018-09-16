@@ -805,7 +805,7 @@ SLIDER
 }
 
 .slider__control:hover {
-  background-color: #b2c1b7;
+  background-color: rgba(255,255,255,0.4);
 }
 
 .slider__control:active {
@@ -831,15 +831,15 @@ SLIDER
   background-image: url("../img/slide_3.png");
 }
 
-#slider-radio-1:checked ~ .main-page .slider #slide-1,
-#slider-radio-2:checked ~ .main-page .slider #slide-2,
-#slider-radio-3:checked ~ .main-page .slider #slide-3 {
+#slider-radio-1:checked ~ .main-page #slide-1,
+#slider-radio-2:checked ~ .main-page #slide-2,
+#slider-radio-3:checked ~ .main-page #slide-3 {
   display: block;
 }
 
-#slider-radio-1:checked ~ .main-page .slider .slider__control[for="slider-radio-1"],
-#slider-radio-2:checked ~ .main-page .slider .slider__control[for="slider-radio-2"],
-#slider-radio-3:checked ~ .main-page .slider .slider__control[for="slider-radio-3"] {
+#slider-radio-1:checked ~ .main-page .slider__control[for="slider-radio-1"],
+#slider-radio-2:checked ~ .main-page .slider__control[for="slider-radio-2"],
+#slider-radio-3:checked ~ .main-page .slider__control[for="slider-radio-3"] {
   background-color: #ffffff;
 }
 
@@ -1884,8 +1884,8 @@ SLIDER
 .filter__price {
   display: inline-block;
   margin: 0;
-  vertical-align: middle;
 
+  vertical-align: middle;
 }
 
 .filter__price input {
