@@ -643,7 +643,7 @@ PAGE HEADER
 
 .menu__extra .phone {
   margin: 0;
-
+  text-decoration: none;
   font-size: 22px;
   line-height: 24px;
   text-align: right;
@@ -781,14 +781,6 @@ SLIDER
   background-position: top center;
   border-radius: 15px;
 }
-
-/* .promo__item:nth-child(odd) {
-  margin-right: 1%;
-}
-
-.promo__item:nth-child(even) {
-  margin-left: 1%;
-} */
 
 .promo__item--raspberry {
   background-color: #a7203b;
@@ -953,6 +945,7 @@ SLIDER
 }
 
 .about {
+  margin-top: 2px;
   margin-bottom: 40px;
   padding: 25px 20px 2px 20px;
 
@@ -1030,35 +1023,39 @@ SLIDER
 
 .blog {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  height: 220px;
-  margin-bottom: 40px;
+
+  margin-bottom: 20px;
 }
 
-.news,
-.subscribe {
+.blog__item {
   display: flex;
   flex-direction: column;
-  width: 50%;
+
+  width: 48.87%;
+  margin-bottom: 20px;
 
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: scenter;
   border-radius: 15px;
 }
 
 .news {
-  margin-right: 13px;
-
   background-image: url("../img/strawberry.jpg");
 }
 
-.new__wrapper {
+.subscribe {
+  background-image: url("../img/bg-post.svg");
+}
+
+.new {
   width: 290px;
   margin: 18px 20px;
 }
 
-.new__subtitle {
+.new__title {
   margin: 5px 0;
 
   font-weight: 700;
@@ -1078,17 +1075,10 @@ SLIDER
   text-decoration-color: #353535;
 }
 
-.subscribe {
-  margin-left: 13px;
-
-  background-image: url("../img/bg-post.svg");
-}
-
 .subscribe__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 210px;
+  justify-content: space-between;
   margin: 5px;
   padding: 29px 20px 35px 22px;
 
@@ -1097,8 +1087,8 @@ SLIDER
 }
 
 .subscribe__info {
-  margin: 0 0 37px 0;
-
+  margin: 0 0 0 0;
+  min-height: 100px;
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
