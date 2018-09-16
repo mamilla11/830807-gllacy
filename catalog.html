@@ -181,8 +181,8 @@
                           <td class="order__price">450 руб.</td>
                         </tr>
                       </table>
-                      <p class="order__total" colspan="5">Итого: 750 руб.</p>
-                      <a class="button order__button" href="#" aria-lable="Оформить заказ">
+                      <p class="order__total">Итого: 750 руб.</p>
+                      <a class="button order__button" href="#">
                         Оформить заказ
                       </a>
                     </div>
@@ -228,7 +228,7 @@
               <fieldset class="filter__group">
                 <legend class="filter__title">Сортировка:</legend>
                 <div class="sort-container">
-                  <select class="filter__sort">
+                  <select class="filter__sort" name="sort-by">
                     <option selected>по популярности</option>
                     <option>сначала недорогие</option>
                     <option>сначала дорогие</option>
@@ -241,10 +241,8 @@
               </fieldset>
               <fieldset class="filter__group">
                 <legend class="filter__title">Цена:
-                  <div class="filter__price">
-                    <label class="filter__price-min"><input name="price-min" type="text" value="100">руб. &ndash; </label>
-                    <label class="filter__price-max"><input name="price-max" type="text" value="500">руб.</label>
-                  </div>
+                  <label class="filter__price"><input name="price-min" type="text" value="100">руб. &ndash; </label>
+                  <label class="filter__price"><input name="price-max" type="text" value="500">руб.</label>
                 </legend>
                 <div class="filter__wrapper">
                   <div class="range">
@@ -384,7 +382,7 @@
             <ul class="product__list">
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-1.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-1.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">310</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -398,7 +396,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-2.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-2.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">380</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -412,7 +410,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-3.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-3.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">355</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -426,7 +424,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-4.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-4.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">415</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -440,7 +438,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-5.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-5.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">325</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -454,7 +452,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-6.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-6.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">410</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -468,7 +466,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-7.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-7.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">375</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -482,7 +480,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-8.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-8.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">320</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -496,7 +494,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-9.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-9.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">440</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -510,7 +508,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-10.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-10.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">435</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -524,7 +522,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-11.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-11.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">355</span>
                     <span class="product__currency">&#x20bd;</span>
@@ -538,7 +536,7 @@
               </li>
               <li class="product__item">
                 <div class="product__container">
-                  <img class="product__image" src="img/product-12.png" width="100%" alt="Фотография мороженого">
+                  <img class="product__image" src="img/product-12.png" width="267" height="267" alt="Фотография мороженого">
                   <div class="product__price">
                     <span class="product__count">420</span>
                     <span class="product__currency">&#x20bd;</span>
