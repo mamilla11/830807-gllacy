@@ -51,11 +51,14 @@ body {
 
 .form__input:hover {
   border: 2px solid #c7c6c5;
+  margin: 9px -1px;
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__input:active {
   border: 2px solid #8fbdec;
   outline: none;
+  margin: 9px -1px;
 }
 
 img {
@@ -494,17 +497,22 @@ PAGE HEADER
   border-radius: 25px;
 }
 
+.auth__input {
+  width: 100%;
+}
+
 .auth__help-wrapper {
   vertical-align: center;
 }
 
 .auth__help-link {
   display: inline-block;
-  margin: 0 10px;
+  margin-left: 10px;
 
   font-size: 13px;
   line-height: 24px;
   vertical-align: middle;
+  width: 124px;
 }
 
 .order__wrapper {
@@ -1107,6 +1115,12 @@ SLIDER
   line-height: 24px;
 }
 
+.form__input--subscribe:hover,
+.form__input--subscribe:active,
+.form__input--subscribe:focus {
+  margin: -1px 9px -1px -1px;
+}
+
 .button--subscribe {
   padding: 9px 20px 12px 20px;
 }
@@ -1314,9 +1328,8 @@ SLIDER
 .feedback__textarea {
   width: auto;
   height: 135px;
-  margin-bottom: 25px;
+  margin: 10px 0 25px 0;
   padding: 9px 14px;
-
   font-size: 16px;
   line-height: 24px;
 }
@@ -1324,6 +1337,12 @@ SLIDER
 .feedback__textarea::placeholder {
   font-size: 16px;
   line-height: 24px;
+}
+
+.feedback__textarea:hover,
+.feedback__textarea:active,
+.feedback__textarea:focus {
+  margin: 9px -1px 26px -1px;
 }
 
 .page-footer {
