@@ -3,6 +3,8 @@ var feedback_close_link = document.querySelector(".feedback__button--close");
 var feedback_modal      = document.querySelector(".feedback__modal");
 var overlay             = document.querySelector(".overlay");
 var feedback_name       = document.querySelector("[name=feedback-name]");
+var feedback_email      = document.querySelector("[name=feedback-email]");
+var feedback_text       = document.querySelector("[name=feedback-text]");
 var search_link         = document.querySelector(".user-action__item.search");
 var search_input        = document.querySelector(".form__input--search");
 var login_link          = document.querySelector(".user-action__item.auth");
@@ -19,13 +21,24 @@ feedback_open_link.addEventListener("click", function(evt) {
 feedback_close_link.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedback_modal.classList.remove("modal-show");
+  feedback_modal.classList.remove("modal-error");
   overlay.classList.remove("overlay-show");
 });
 
 overlay.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedback_modal.classList.remove("modal-show");
+  feedback_modal.classList.remove("modal-error");
   overlay.classList.remove("overlay-show");
+});
+
+feedback_modal.addEventListener("submit", function(evt) {
+  if (!feedback_name.value  ||
+      !feedback_email.value ||
+      !feedback_text.value) {
+        evt.preventDefault();
+        feedback_modal.classList.add("modal-error");
+      }
 });
 
 search_link.addEventListener("mouseenter", function() {
@@ -42,6 +55,7 @@ window.addEventListener("keydown", function(evt) {
     if (feedback_modal.classList.contains("modal-show")) {
       evt.preventDefault();
       feedback_modal.classList.remove("modal-show");
+      feedback_modal.classList.remove("modal-error");
       overlay.classList.remove("overlay-show");
     }
   }
