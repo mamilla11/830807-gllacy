@@ -921,7 +921,7 @@ SLIDER
 }
 
 .product {
-  margin-bottom: 45px;
+  margin-bottom: 44px;
 }
 
 .popular__list,
@@ -2123,40 +2123,42 @@ input[type="checkbox"]:checked ~ .checkbox--unchecked {
           transform: rotate(180deg);
 }
 
-.pagination__icon-shape {
-  fill: #9db1a5;
+.pagination__item {
+  margin-right: 5px;
 }
 
-.pagination__item {
-  margin-right: 4px;
+.pagination__item:first-child {
+  margin-right: 6px;
 }
 
 .pagination__item:last-child {
-  margin-right: 0;
+  margin-right: -7px;
 }
 
-.pagination__link,
-.pagination__disabled-link {
+.pagination__link {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 4px 8px 3px 8px;
 
   vertical-align: middle;
 
   border-radius: 50%;
 }
 
+.pagination__link:hover,
+.pagination__link:focus {
+  background-color: rgba(255,255,255,0.2);
+}
+
 .pagination__link--current,
+.pagination__link--current:hover,
+.pagination__link--current:focus,
 .pagination__link:active {
   color: #323232;
 
   background-color: rgba(255,255,255,1);
 }
 
-.pagination__link:not(.pagination__link--current):hover,
-.pagination__link:not(.pagination__link--current):focus {
-  background-color: rgba(255,255,255,0.2);
-}
-
+.pagination__link .pagination__icon-shape,
 .pagination__link:hover .pagination__icon-shape,
 .pagination__link:focus .pagination__icon-shape {
   fill: #fcfcfc;
@@ -2164,4 +2166,18 @@ input[type="checkbox"]:checked ~ .checkbox--unchecked {
 
 .pagination__link:active .pagination__icon-shape {
   fill: #323232;
+}
+
+.pagination__link--disabled,
+.pagination__link--disabled:hover,
+.pagination__link--disabled:focus,
+.pagination__link--disabled:active {
+  background-color: transparent;
+}
+
+.pagination__link--disabled .pagination__icon-shape,
+.pagination__link--disabled:hover  .pagination__icon-shape,
+.pagination__link--disabled:focus  .pagination__icon-shape,
+.pagination__link--disabled:active .pagination__icon-shape {
+  fill: #9db1a5;
 }
