@@ -41,13 +41,13 @@ feedback_modal.addEventListener("submit", function(evt) {
   if (!feedback_name.value  ||
       !feedback_email.value ||
       !feedback_text.value) {
-        evt.preventDefault();
-        feedback_modal.classList.add("modal-error");
+    evt.preventDefault();
+    feedback_modal.classList.add("modal-error");
 
-        setTimeout(function() {
-          feedback_modal.classList.remove("modal-error");
-        }, 300);
-      }
+    setTimeout(function() {
+      feedback_modal.classList.remove("modal-error");
+    }, 300);
+  }
 });
 
 search_link.addEventListener("mouseenter", function() {
