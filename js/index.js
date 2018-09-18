@@ -6,7 +6,7 @@ var feedback_name       = document.querySelector("[name=feedback-name]");
 var feedback_email      = document.querySelector("[name=feedback-email]");
 var feedback_text       = document.querySelector("[name=feedback-text]");
 var search_link         = document.querySelector(".user-action__item.search");
-var search_input        = document.querySelector(".form__input--search");
+var search_input        = document.querySelector(".input-field--search");
 var login_link          = document.querySelector(".user-action__item.auth");
 var login_input         = document.querySelector("[name=login]");
 
