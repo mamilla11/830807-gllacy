@@ -84,7 +84,7 @@
                       <label class="visually-hidden" for="search-input">
                         Введите запрос в поле поиска
                       </label>
-                      <input class="form__input form__input--search"
+                      <input class="input-field input-field--search"
                              type="search" id="search-input" name="search"
                              placeholder="Что ищем?">
                     </form>
@@ -107,11 +107,11 @@
                   <div class="popup popup--right-aligned">
                     <form class="form auth__form" action="http://echo.htmlacademy.ru" method="post">
                       <label class="visually-hidden" for="login">Электронная почта</label>
-                      <input class="form__input auth__input"
+                      <input class="input-field input-field--auth"
                              type="email" id="login" name="login"
                              placeholder="Электронная почта" required>
                       <label class="visually-hidden" for="password">Пароль</label>
-                      <input class="form__input auth__input"
+                      <input class="input-field auth__input"
                              type="password" id="password" name="password"
                              placeholder="Пароль" required>
                       <div class="auth__submit-wrapper">
@@ -276,21 +276,21 @@
                 Магазин Глэйси &mdash; это онлайн- и офлайн-магазин
                 по продаже мороженого собственного производства на развес
               </h1>
-              <ul class="feature__list">
-                <li class="feature__item feature__item--ice-cream">
+              <ul class="features">
+                <li class="features__item features__item--ice-cream">
                   Все наше мороженое изготавливается на собственном производстве,
                   с использованием современного оборудования и проверенных временем технологий.
                 </li>
-                <li class="feature__item feature__item--cow">
+                <li class="features__item features__item--cow">
                   Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний,
                   с которыми нас связывает долговременное сотрудничество.
                 </li>
-                <li class="feature__item feature__item--leaf">
+                <li class="features__item features__item--leaf">
                   Для приготовления мороженого используются настоящие сливки и
                   молоко высочайшего качества. Все дополнительные ингридиенты и добавки
                   произведены из натурального, экологически чистого сырья.
                 </li>
-                <li class="feature__item feature__item--thermo">
+                <li class="features__item features__item--thermo">
                   Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
                   который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
                 </li>
@@ -317,7 +317,7 @@
                     <label class="visually-hidden" for="subscribe-email">
                       Для оформления подписки введите, пожалуйста, свою электронную почту
                     </label>
-                    <input class="form__input form__input--subscribe" type="email"
+                    <input class="input-field input-field--subscribe" type="email"
                           name="subscribe-email" id="subscribe-email"
                           placeholder="Электронная почта" required>
                     <button class="button button--subscribe" type="submit">Отправить</button>
@@ -419,20 +419,20 @@
           <label class="visually-hidden" for="feedback-name">
             Представьтесь, пожалуйста
           </label>
-          <input class="form__input feedback__input" type="text"
+          <input class="input-field input-field--feedback" type="text"
                 id="feedback-name" name="feedback-name"
                 placeholder="Как вас зовут?">
           <label class="visually-hidden" for="feedback-email">
             Введите адрес своей электронной почты,
             чтобы мы могли связаться с вами
           </label>
-          <input class="form__input feedback__input" type="email"
+          <input class="input-field input-field--feedback" type="email"
                 id="feedback-email" name="feedback-email"
                 placeholder="Ваша почта для ответа?">
           <label class="visually-hidden" for="feedback-text">
             Напишите нам что-нибудь...
           </label>
-          <textarea class="form__input feedback__textarea" name="feedback-text" id="feedback-text"
+          <textarea class="input-field input-field--textarea" name="feedback-text" id="feedback-text"
                     placeholder="Напишите что-нибудь..."></textarea>
           <input class="button feedback__button--submit" type="submit" value="Отправить">
         </form>

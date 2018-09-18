@@ -75,7 +75,7 @@
                       <label class="visually-hidden" for="search-input">
                         Введите запрос в поле поиска
                       </label>
-                      <input class="form__input form__input--search"
+                      <input class="input-field input-field--search"
                              type="search" id="search-input" name="search"
                              placeholder="Что ищем?">
                     </form>
@@ -97,11 +97,11 @@
                   <div class="popup popup--right-aligned">
                     <form class="form auth__form" action="http://echo.htmlacademy.ru" method="post">
                       <label class="visually-hidden" for="login">Электронная почта</label>
-                      <input class="form__input auth__input"
+                      <input class="input-field input-field--auth"
                              type="email" id="login" name="login"
                              placeholder="Электронная почта" required>
                       <label class="visually-hidden" for="password">Пароль</label>
-                      <input class="form__input auth__input"
+                      <input class="input-field input-field--auth"
                              type="password" id="password" name="password"
                              placeholder="Пароль" required>
                       <div class="auth__submit-wrapper">
@@ -196,7 +196,8 @@
             </div>
           </nav>
         </header>
-        <main class="catalog content-container">
+        <main class="catalog ">
+          <div class="content-container">
           <header class="catalog__header">
             <nav class="crumbs">
               <ul class="crumbs__list">
@@ -294,12 +295,12 @@
                     <input class="visually-hidden"
                            type="checkbox" id="topping-opt-1" name="chocolate"
                            checked>
-                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                    <svg class="checkbox checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
                       <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
                                                       0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
                                                       0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
                     </svg>
-                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
+                    <svg class="checkbox checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
                       <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
                       <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
                                                       1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
@@ -311,12 +312,12 @@
                     <input class="visually-hidden"
                            type="checkbox" id="topping-opt-2" name="sugar"
                            checked>
-                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                    <svg class="checkbox checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
                       <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
                                                       0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
                                                       0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
                     </svg>
-                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
+                    <svg class="checkbox checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
                       <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
                       <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
                                                       1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
@@ -327,12 +328,12 @@
                   <label class="filter__topping" tabindex="0">
                     <input class="visually-hidden"
                            type="checkbox" id="topping-opt-3" name="fruits">
-                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                    <svg class="checkbox checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
                       <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
                                                       0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
                                                       0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
                     </svg>
-                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
+                    <svg class="checkbox checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
                       <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
                       <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
                                                       1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
@@ -343,12 +344,12 @@
                   <label class="filter__topping" tabindex="0">
                     <input class="visually-hidden"
                             type="checkbox" id="topping-opt-4" name="syrup">
-                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                    <svg class="checkbox checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
                       <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
                                                       0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
                                                       0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
                     </svg>
-                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
+                    <svg class="checkbox checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
                       <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
                       <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
                                                       1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
@@ -359,12 +360,12 @@
                   <label class="filter__topping" tabindex="0">
                     <input class="visually-hidden"
                             type="checkbox" id="topping-opt-5" name="gam">
-                    <svg class="checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                    <svg class="checkbox checkbox--unchecked" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
                       <path class="checkbox__icon" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542
                                                       0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35
                                                       0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
                     </svg>
-                    <svg class="checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
+                    <svg class="checkbox checkbox--checked" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 27 23">
                       <path class="checkbox__icon" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
                       <path class="checkbox__icon" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1
                                                       1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0
@@ -589,6 +590,7 @@
               </ul>
             </nav>
           </footer>
+        </div>
         </main>
         <footer class="page-footer content-container">
           <nav class="page-footer__nav">
