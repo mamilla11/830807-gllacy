@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
   margin: 0;
   padding: 0;
@@ -1442,7 +1444,9 @@ SLIDER
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
 
+.modal-bounce {
   animation-name: bounce;
   animation-duration: 0.3s;
 }
@@ -2202,12 +2206,12 @@ input[type="checkbox"]:checked ~ .checkbox--unchecked {
   50%,
   70%,
   90% {
-    transform: translate(-60%, -50%);
+    transform: translate(-55%, -50%);
   }
   20%,
   40%,
   60%,
   80% {
-    transform: translate(-70%, -50%);
+    transform: translate(-45%, -50%);
   }
 }

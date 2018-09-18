@@ -14,8 +14,13 @@ var login_input         = document.querySelector("[name=login]");
 feedback_open_link.addEventListener("click", function(evt) {
   evt.preventDefault();
   feedback_modal.classList.add("modal-show");
+  feedback_modal.classList.add("modal-bounce");
   overlay.classList.add("overlay-show");
   feedback_name.focus();
+
+  setTimeout(function() {
+    feedback_modal.classList.remove("modal-bounce");
+  }, 300);
 });
 
 feedback_close_link.addEventListener("click", function(evt) {
@@ -38,6 +43,10 @@ feedback_modal.addEventListener("submit", function(evt) {
       !feedback_text.value) {
         evt.preventDefault();
         feedback_modal.classList.add("modal-error");
+
+        setTimeout(function() {
+          feedback_modal.classList.remove("modal-error");
+        }, 300);
       }
 });
 
