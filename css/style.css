@@ -869,6 +869,7 @@ SLIDER
 
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
   border-radius: 15px;
 
   -webkit-box-direction: normal;
@@ -908,7 +909,7 @@ SLIDER
   display: block;
   align-self: flex-end;
   padding: 10px 24px 12px 23px;
-
+  margin-top: auto;
   -ms-flex-item-align: end;
 }
 
@@ -1074,19 +1075,6 @@ SLIDER
   height: 36px;
 }
 
-.product__currency,
-.product__currency-icon {
-  display: inline-block;
-  font-size: 0;
-  width: 31px;
-  height: 36px;
-  vertical-align: middle;
-}
-
-.product__currency-icon {
-
-}
-
 .product__link {
   font-weight: 500;
   font-size: 16px;
@@ -1204,6 +1192,7 @@ SLIDER
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: cover;
   border-radius: 15px;
 
   -webkit-box-direction: normal;
@@ -1253,6 +1242,7 @@ SLIDER
   justify-content: space-between;
   margin: 5px;
   padding: 29px 20px 34px 22px;
+  height: 100%;
 
   background-color: #f8f7f4;
   border-radius: 15px;
@@ -1261,6 +1251,8 @@ SLIDER
   -webkit-box-orient: vertical;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+
+
 }
 
 .subscribe__info {
@@ -1278,6 +1270,7 @@ SLIDER
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 
   -webkit-box-align: center;
   -webkit-box-pack: justify;
@@ -1330,7 +1323,7 @@ SLIDER
 .map {
   position: relative;
 
-  margin: 20px 0 17px 0;
+  margin: 20px 0 0 0;
 }
 
 .map-wrapper {
@@ -1615,6 +1608,7 @@ SLIDER
 }
 
 .page-footer {
+  padding-top: 17px;
   padding-bottom: 30px;
 }
 
@@ -1780,10 +1774,6 @@ SLIDER
 
   font-size: 12px;
   line-height: 18px;
-}
-
-.catalog {
-  margin-bottom: 15px;
 }
 
 .catalog__title {
