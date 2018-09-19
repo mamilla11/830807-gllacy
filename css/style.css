@@ -90,11 +90,6 @@ body {
   outline: none;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 .page-container {
   min-width: 900px;
   max-width: 1200px;
@@ -798,8 +793,6 @@ SLIDER
   background-color: transparent;
   border: 2px solid white;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
 
@@ -1065,6 +1058,33 @@ SLIDER
 
 .product__unit {
   font-size: 30px;
+}
+
+.product__amount {
+  position: relative;
+  padding-right: 37px;
+}
+
+.product__amount::after {
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  content: url(../img/rouble.svg);
+  width: 31px;
+  height: 36px;
+}
+
+.product__currency,
+.product__currency-icon {
+  display: inline-block;
+  font-size: 0;
+  width: 31px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.product__currency-icon {
+
 }
 
 .product__link {
@@ -1949,6 +1969,13 @@ SLIDER
   border: 8px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.range__toggle:hover,
+.range__toggle:focus,
+.range__toggle:active {
+  top: 7px;
+  border: 9px solid #ffffff;
 }
 
 .range__toggle--min {
