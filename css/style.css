@@ -1981,8 +1981,6 @@ SLIDER
 }
 
 .filter__fatness {
-  position: relative;
-
   display: inline-block;
   margin-right: 16px;
   padding-left: 29px;
@@ -1992,20 +1990,19 @@ SLIDER
   cursor: pointer;
 }
 
-.filter__fatness-indicator:hover,
-.filter__fatness-indicator:focus {
-  -webkit-box-shadow: 0 0 0 3px #ffffff;
-          box-shadow: 0 0 0 3px #ffffff;
-}
-
 .filter__fatness:last-child {
   margin-right: 2px;
 }
 
-.filter__fatness-indicator {
+.filter__fatness-option {
+  position: relative;
+}
+
+.filter__fatness-option::before {
   position: absolute;
-  top: 1px;
-  left: 0;
+  content: "";
+  top: 2px;
+  left: -30px;;
 
   width: 8px;
   height: 8px;
@@ -2017,19 +2014,25 @@ SLIDER
           box-shadow: 0 0 0 3px #eef1ef;
 }
 
-input[name="fatness"]:checked + .filter__fatness-indicator {
+.filter__fatness-option:hover::before,
+.filter__fatness-option:focus::before {
+  -webkit-box-shadow: 0 0 0 3px #ffffff;
+          box-shadow: 0 0 0 3px #ffffff;
+}
+
+.filter__fatness-radio:checked + .filter__fatness-option::before {
   background-color: #eef1ef;
 }
 
-input[name="fatness"]:checked + .filter__fatness-indicator:hover {
+.filter__fatness-radio:checked + .filter__fatness-option:hover::before {
   background-color: #ffffff;
 }
 
-input[name="fatness"]:checked:disabled + .filter__fatness-indicator {
+.filter__fatness-radio:checked:disabled + .filter__fatness-option::before {
   background-color: #b5c4bc;
 }
 
-input[name="fatness"]:disabled + .filter__fatness-indicator {
+.filter__fatness-radio:disabled + .filter__fatness-option::before {
   -webkit-box-shadow: 0 0 0 3px #b5c4bc;
           box-shadow: 0 0 0 3px #b5c4bc;
 }
@@ -2043,6 +2046,12 @@ input[name="fatness"]:disabled + .filter__fatness-indicator {
 
   margin-right: 18px;
   padding-left: 30px;
+
+  display: inline-block;
+
+  vertical-align: middle;
+
+  cursor: pointer;
 }
 
 .filter__topping:nth-child(n+3) {
@@ -2074,16 +2083,16 @@ input[name="fatness"]:disabled + .filter__fatness-indicator {
   fill: #ffffff;
 }
 
-input[type="checkbox"]:disabled ~ .checkbox--unchecked,
-input[type="checkbox"]:disabled ~ .checkbox--checked {
+input[type="checkbox"]:disabled + .filter__topping-name .checkbox--unchecked,
+input[type="checkbox"]:disabled + .filter__topping-name .checkbox--checked {
   fill: #b5c4bc;
 }
 
-input[type="checkbox"]:checked ~ .checkbox--checked {
+input[type="checkbox"]:checked + .filter__topping-name .checkbox--checked {
   display: block;
 }
 
-input[type="checkbox"]:checked ~ .checkbox--unchecked {
+input[type="checkbox"]:checked + .filter__topping-name .checkbox--unchecked {
   display: none;
 }
 
