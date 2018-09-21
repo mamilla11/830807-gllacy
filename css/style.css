@@ -945,7 +945,7 @@ SLIDER
 
   width: 23.5%;
   margin-top: -0.5%;
-  margin-bottom: -4.0%;
+  margin-bottom: -3.9%;
   padding: 0.5% 1% 2% 1%;
 
   text-align: center;
@@ -975,7 +975,7 @@ SLIDER
 .product__container {
   position: relative;
 
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .product__name {
@@ -1022,7 +1022,7 @@ SLIDER
 }
 
 .product__image {
-  width: 100%;
+  max-width: 267px;
   height: auto;
 
   border-radius: 50%;
@@ -1030,7 +1030,7 @@ SLIDER
 
 .product__price {
   position: absolute;
-  bottom: 16px;
+  bottom: 14px;
   left: 0;
 
   display: -webkit-box;
@@ -1857,7 +1857,7 @@ SLIDER
 
 .filter__sort {
   width: 193px;
-  padding: 10px 30px 9px 14px;
+  padding: 9px 30px 9px 12px;
 
   font-weight: 500;
   font-size: 16px;
