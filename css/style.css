@@ -43,10 +43,10 @@ body {
   vertical-align: middle;
   color: #323232;
 
-  box-shadow: 0 0 0 1px #d3d3d2;
-  border-radius: 5px;
-
   border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px #d3d3d2;
+          box-shadow: 0 0 0 1px #d3d3d2;
 }
 
 .input-field::-webkit-input-placeholder {
@@ -78,13 +78,15 @@ body {
 }
 
 .input-field:hover {
-  box-shadow: 0 0 0px 2px #c7c6c5;
+  -webkit-box-shadow: 0 0 0 2px #c7c6c5;
+          box-shadow: 0 0 0 2px #c7c6c5;
 }
 
 .input-field:focus,
 .input-field:active {
-  box-shadow: 0 0 0px 2px #8fbdec;
   outline: none;
+  -webkit-box-shadow: 0 0 0 2px #8fbdec;
+          box-shadow: 0 0 0 2px #8fbdec;
 }
 
 .page-container {
@@ -905,8 +907,9 @@ SLIDER
 .promo__link {
   display: block;
   align-self: flex-end;
-  padding: 10px 24px 12px 23px;
   margin-top: auto;
+  padding: 10px 24px 12px 23px;
+
   -ms-flex-item-align: end;
 }
 
@@ -971,8 +974,8 @@ SLIDER
 
 .product__container {
   position: relative;
-  max-width: 267px;
 
+  max-width: 267px;
   margin-bottom: 7px;
 }
 
@@ -1061,14 +1064,16 @@ SLIDER
 
 .product__amount {
   position: relative;
+
   padding-right: 37px;
 }
 
 .product__amount::after {
+  content: url(../img/rouble.svg);
   position: absolute;
   top: 3px;
   right: 2px;
-  content: url(../img/rouble.svg);
+
   width: 31px;
   height: 36px;
 }
@@ -1238,9 +1243,9 @@ SLIDER
   -ms-flex-direction: column;
       flex-direction: column;
   justify-content: space-between;
+  height: 100%;
   margin: 5px;
   padding: 29px 20px 34px 22px;
-  height: 100%;
 
   background-color: #f8f7f4;
   border-radius: 15px;
@@ -1249,8 +1254,6 @@ SLIDER
   -webkit-box-orient: vertical;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-
-
 }
 
 .subscribe__info {
@@ -1951,6 +1954,7 @@ SLIDER
 .range__toggle:focus,
 .range__toggle:active {
   top: 7px;
+
   border: 9px solid #ffffff;
 }
 
@@ -1985,8 +1989,8 @@ SLIDER
 }
 
 .filter__fatness-option::before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 2px;
   left: -30px;
 
@@ -2034,10 +2038,9 @@ SLIDER
 .filter__topping {
   position: relative;
 
+  display: inline-block;
   margin-right: 18px;
   padding-left: 30px;
-
-  display: inline-block;
 
   vertical-align: middle;
 
